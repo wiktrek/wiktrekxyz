@@ -1,0 +1,58 @@
+.form {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: grid;
+  grid-column: 1;
+  grid-gap: 0.3rem;
+}
+.forminput {
+  border: none;
+  appearance: none;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  width: 20rem;
+  font-size: 0.8rem;
+}
+.label {
+  text-align: left;
+  display: grid;
+  grid-column: 2;
+}
+.label span {
+  color: #fff;
+}
+.submit {
+  border: none;
+  appearance: none;
+  padding: 0.75rem;
+  border-radius: 0.18rem;
+  width: 10rem;
+  font-size: 0.8rem;
+  color: grey;
+  background-color: white;
+}
+.options {
+  border: none;
+  appearance: none;
+  padding: 0.75rem;
+  border-radius: 1em;
+  width: 20rem;
+  font-size: 0.8rem;
+}
+#error {
+  color: red;
+}
+#removebutton {
+  background-color: transparent;
+  border-color: transparent;
+}
+#optionsbutton {
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  background-color: transparent;
+  border-color: transparent;
+  background-color: #3b3b3b;
+}

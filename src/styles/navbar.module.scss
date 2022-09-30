@@ -1,0 +1,31 @@
+.nav {
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 1.8rem 1.8rem;
+  height: 1em;
+}
+.navlinks {
+  list-style: none;
+}
+.navlinks li {
+  display: inline-block;
+  padding: 0px 1.25rem;
+}
+.select {
+  display: none; /*hide original SELECT element: */
+}
+@media (prefers-color-scheme: dark) {
+  .nav {
+    color: #fff;
+
+    background-color: #363535;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .nav {
+    color: black;
+    background-color: #ffffff;
+  }
+}

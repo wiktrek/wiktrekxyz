@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+referentialIntegrity = "prisma"
+}
+model ShortLink {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  owner String 
+  url String @db.VarChar(255)
+  slug String @unique
+  @@index(slug)
+}
+model PollQuestion {
+id String @id @default(cuid())
+createdAt DateTime @default(now())
+
+endsAt DateTime?
+
+question String @db.VarChar(5000)
+
+ownerEmail String @db.VarChar(255)
+options Json
+Vote Vote[]
+@@index(ownerEmail)
+}
+model Vote {
+  id String @id @default(cuid())
+  createdAt DateTime @default(now())
+  choice Int 
+  voterToken String @db.VarChar(255)
+  question PollQuestion @relation(fields: [questionId], references: [id])
+  questionId String
+@@unique([voterToken, questionId])
+@@index([voterToken])
+@@index([questionId])
+}
