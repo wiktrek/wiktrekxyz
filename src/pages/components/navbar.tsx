@@ -12,7 +12,7 @@ function Navbar() {
           <li>
             <Link href="/">Home</Link>
           </li>
-          <li>
+          <li id={styles.projects}>
             <Link href="/projects">Projects</Link>
           </li>
         </ul>

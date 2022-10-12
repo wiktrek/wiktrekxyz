@@ -33,6 +33,7 @@ export const questionRouter = trpc
         vote: myVote,
         isOwner: question?.ownerEmail === input.email,
       };
+
       if (rest.vote || rest.isOwner) {
         const votes = await prisma.vote.groupBy({
           where: { questionId: input.id },

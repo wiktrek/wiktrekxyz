@@ -9,6 +9,7 @@ import {
   createQuestionValidator,
 } from '../../../shared/create-question-validator';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 const CreateQuestionForm = () => {
   const router = useRouter();
@@ -117,9 +118,9 @@ const CreateQuestionForm = () => {
 const QuestionCreator: React.FC = () => {
   return (
     <>
-      <head>
+      <Head>
         <title>Poll create- wiktrek</title>
-      </head>
+      </Head>
       <CreateQuestionForm />
     </>
   );

@@ -5,27 +5,19 @@
   align-items: center;
   padding: 1.8rem 1.8rem 1.8rem;
   height: 1em;
+  color: #fff;
+}
+#projects {
+  background-color: #006eff;
+  border-radius: 0.4rem;
 }
 .navlinks {
   list-style: none;
 }
 .navlinks li {
   display: inline-block;
-  padding: 0px 1.25rem;
+  padding: 0.2rem 1rem 0.2rem;
 }
 .select {
   display: none; /*hide original SELECT element: */
-}
-@media (prefers-color-scheme: dark) {
-  .nav {
-    color: #fff;
-
-    background-color: #363535;
-  }
-}
-@media (prefers-color-scheme: light) {
-  .nav {
-    color: black;
-    background-color: #ffffff;
-  }
 }
