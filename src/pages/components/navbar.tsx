@@ -5,9 +5,7 @@ function Navbar() {
   return (
     <>
       <div className={styles.nav}>
-        <a href="https://www.wiktrek.xyz/" target="__blank">
-          wiktrek.xyz
-        </a>
+        <a href="https://www.wiktrek.xyz/">wiktrek.xyz</a>
         <ul className={styles.navlinks}>
           <li>
             <Link href="/">Home</Link>
