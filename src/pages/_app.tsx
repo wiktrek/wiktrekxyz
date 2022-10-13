@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="wiktrek, wiktrek.xyz, wiktrek website, wiktor, wiktorek, xyz, wiktrek xyz, wiktor, wiktorek"
         />
         <meta name="description" content="wiktrek's website" />
-        <meta name="icon" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <UserProvider>
         <Navbar />

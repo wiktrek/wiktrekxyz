@@ -19,7 +19,7 @@ const Home: NextPage = () => {
             </li>
             <li>
               <Link href="/projects/calculator">
-                <FontAwesomeIcon icon={faCalculator} />
+                <a>calculator</a>
               </Link>
             </li>
             <li>
@@ -35,6 +35,9 @@ const Home: NextPage = () => {
                 <Link href="/projects/poll">
                   <a>poll app</a>
                 </Link>
+              </li>
+              <li>
+                <a href="https://info.wiktrek.xyz">Info</a>
               </li>
             </li>
             <h1>future Projects</h1>
