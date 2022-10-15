@@ -5,6 +5,7 @@ import styles from '../styles/Projects.module.scss';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalculator } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
 const Home: NextPage = () => {
   return (
     <>

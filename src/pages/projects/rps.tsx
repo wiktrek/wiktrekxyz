@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import React from 'react';
 import { useState } from 'react';
 import styles from '../../styles/rpc.module.scss';
 

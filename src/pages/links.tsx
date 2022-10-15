@@ -9,7 +9,11 @@ import {
   faTwitch,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
 import { faGlobe, faCode } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
 const Home: NextPage = () => {
   return (
     <>

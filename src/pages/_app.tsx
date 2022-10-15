@@ -6,6 +6,7 @@ import { UserProvider } from '@auth0/nextjs-auth0';
 import superjson from 'superjson';
 import Navbar from './components/navbar';
 import Head from 'next/head';
+import React from 'react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
