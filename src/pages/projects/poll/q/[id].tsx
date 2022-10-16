@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useUser } from '@auth0/nextjs-auth0';
 import styles from '../../../../styles/pollq.module.scss';
 import { useEffect, useState } from 'react';
+import { map } from 'zod';
 const { v4: uuidv4 } = require('uuid');
 const QuestionPageContenet: React.FC<{
   id: string;
@@ -14,13 +15,16 @@ const QuestionPageContenet: React.FC<{
 }> = ({ id, token, email }) => {
   const { user } = useUser();
   let isOwner = false;
+  let totalVotes = 0;
   const { data, isLoading, error } = trpc.useQuery([
     'questions.get-by-id',
     { id, token, email },
   ]);
   const { mutate, data: voteResponse } = trpc.useMutation(
     'questions.vote-on-question',
-    { onSuccess: () => window.location.reload() }
+    {
+      onSuccess: () => window.location.reload(),
+    }
   );
 
   if (isLoading) {
@@ -29,6 +33,17 @@ const QuestionPageContenet: React.FC<{
   if (!data || !data?.question) {
     return <div>Question not found</div>;
   }
+  const getTotalVotes = (votes: any) => {
+    votes?.map((choice: { _count: number }) => {
+      totalVotes += choice._count;
+    });
+  };
+  const getPercent = (voteCount: any) => {
+    if (voteCount !== undefined && totalVotes > 0)
+      return `${((voteCount / totalVotes) * 100).toFixed()}%`;
+    else if (voteCount == undefined) return ``;
+  };
+  if (data && data != undefined) getTotalVotes(data.votes);
   if (user?.name === data.question?.ownerEmail) isOwner = true;
   return (
     <>
@@ -37,11 +52,13 @@ const QuestionPageContenet: React.FC<{
         <div className={styles.yourpoll}>
           <a>{data.question?.question}</a>
           {(data.question?.options as string[])?.map((option, index) => {
-            if (isOwner === true) {
+            if (isOwner || data.vote) {
               return (
                 <div className={styles.options} key={index}>
                   <a>
-                    {data?.votes?.[index]?._count ?? 0} - {(option as any).text}
+                    {data?.votes?.[index]?._count ?? 0} {` `}
+                    {getPercent(data?.votes?.[index]?._count)}- {` `}
+                    {(option as any).text}
                   </a>
                 </div>
               );

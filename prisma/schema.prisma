@@ -29,6 +29,7 @@ question String @db.VarChar(5000)
 
 ownerEmail String @db.VarChar(255)
 options Json
+end Boolean
 Vote Vote[]
 @@index(ownerEmail)
 }

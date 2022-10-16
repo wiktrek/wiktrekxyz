@@ -76,6 +76,7 @@ export const questionRouter = trpc
         data: {
           question: input.question,
           ownerEmail: input.email,
+          end: false,
           options: input.options,
         },
       });

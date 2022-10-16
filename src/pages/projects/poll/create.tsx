@@ -53,6 +53,7 @@ const CreateQuestionForm = () => {
             mutate({
               question: data.question,
               email: `${user.name}`,
+
               options: data.options,
             });
           })}
