@@ -112,17 +112,19 @@ const Home: NextPage<Props> = ({ link }) => {
             <tbody>
               {link.map((item: any, index: any) => {
                 return (
-                  <tr key={item.id} className={styles.slug} id={item.slug}>
-                    <th scope="row">{index + 1}</th>
-                    <td id="slug-row">{item.slug}</td>
-                    <td>url: {item.url}</td>
-                    <button onClick={CopyUrl}>
-                      <FontAwesomeIcon icon={faClipboard} />
-                    </button>
-                    <button onClick={Deletefunction} data-slug={item.slug}>
-                      <FontAwesomeIcon icon={faTrash} />
-                    </button>
-                  </tr>
+                  <>
+                    <div className={styles.slug} id={item.slug}>
+                      {index + 1 + ' '}
+                      {item.slug}
+                      {/* url: {item.url} */}
+                      <button onClick={CopyUrl}>
+                        <FontAwesomeIcon icon={faClipboard} />
+                      </button>
+                      <button onClick={Deletefunction} data-slug={item.slug}>
+                        <FontAwesomeIcon icon={faTrash} />
+                      </button>
+                    </div>
+                  </>
                 );
               })}
             </tbody>

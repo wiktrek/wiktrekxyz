@@ -17,9 +17,11 @@
 }
 .slug {
   padding: 0.5rem;
-  height: 2rem;
-  width: 25rem;
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 15rem;
   color: white;
+  align-items: center;
   text-align: center;
   border-radius: 1rem;
   border-color: #00ffff;
@@ -27,8 +29,10 @@
 }
 .slug button {
   background-color: transparent;
-  padding: 0.5rem;
-  border-radius: 0, 5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border-color: blue;
 }
 @media screen and (max-device-width: 60rem) {
   .slug {

@@ -14,6 +14,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>wiktrek.xyz</title>
         <meta
+          http-equiv="Content-Security-Policy"
+          content="upgrade-insecure-requests"
+        />
+        <meta
           name="keywords"
           content="wiktrek, wiktrek.xyz, wiktrek website, wiktor, wiktorek, xyz, wiktrek xyz, wiktor, wiktorek"
         />
