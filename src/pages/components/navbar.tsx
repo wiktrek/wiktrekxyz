@@ -14,7 +14,14 @@ function Navbar() {
             <Link href="/projects">Projects</Link>
           </li>
         </ul>
-        <Link href="/links">Links</Link>
+        <ul className={styles.navlinks}>
+          <li>
+            <Link href="/api/auth/logout">logout</Link>
+          </li>
+          <li>
+            <Link href="/links">Links</Link>
+          </li>
+        </ul>
       </div>
     </>
   );
