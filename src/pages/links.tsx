@@ -48,7 +48,7 @@ const Home: NextPage = () => {
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/channel/UCd67pmblUu1gf5yhItABbqA">
+            <a href="https://www.youtube.com/@wiktrek" target="__blank">
               <FontAwesomeIcon icon={faYoutube} />
             </a>
           </li>
