@@ -27,9 +27,15 @@ const Home: NextPage = () => {
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
+
           <li>
             <a href="https://github.com/wiktrek" target="__blank">
               <FontAwesomeIcon icon={faGithub} />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@wiktrek" target="__blank">
+              <FontAwesomeIcon icon={faYoutube} />
             </a>
           </li>
           <li>
@@ -45,11 +51,6 @@ const Home: NextPage = () => {
           <li>
             <a href="https://github.com/wiktrek/wiktrekxyz" target="__blank">
               <FontAwesomeIcon icon={faCode} />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/@wiktrek" target="__blank">
-              <FontAwesomeIcon icon={faYoutube} />
             </a>
           </li>
         </ul>
