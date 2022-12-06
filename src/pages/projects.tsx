@@ -16,6 +16,14 @@ const Home: NextPage = () => {
         <div>
           <ul className={styles.links}>
             <li>
+              <a href="https://term.wiktrek.xyz">Terminal</a>
+            </li>
+            <li>
+              <Link href="/projects/poll">
+                <a>poll app</a>
+              </Link>
+            </li>
+            <li>
               <Link href="/projects/url">Link shortener</Link>
             </li>
             <li>
@@ -32,14 +40,6 @@ const Home: NextPage = () => {
               <Link href="/projects/rng">
                 <a>random number generator</a>
               </Link>
-              <li>
-                <Link href="/projects/poll">
-                  <a>poll app</a>
-                </Link>
-              </li>
-              <li>
-                <a href="https://info.wiktrek.xyz">Info</a>
-              </li>
             </li>
             <h1>future Projects</h1>
             <li>
