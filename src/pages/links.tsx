@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       <div className={styles.container}>
         <ul className={styles.links}>
           <li>
-            <a href="https://www.instagram.com/wiktrek1232" target="__blank">
+            <a href="https://www.instagram.com/wiktrekxyz" target="__blank">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
