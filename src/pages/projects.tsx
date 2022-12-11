@@ -20,6 +20,12 @@ const Home: NextPage = () => {
               <a href="https://term.wiktrek.xyz">Terminal</a>
             </li>
             <li>
+              <a href="https://news.wiktrek.xyz">news</a>
+            </li>
+            <li>
+              <a href="https://three.wiktrek.xyz">three.js</a>
+            </li>
+            <li>
               <Link href="/projects/poll">
                 <a>poll app</a>
               </Link>
