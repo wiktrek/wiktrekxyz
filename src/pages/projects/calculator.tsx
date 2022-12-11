@@ -74,6 +74,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>calculator - wiktrek</title>
+        <meta name="description" content="calculator" />
       </Head>
       <div className={styles.container}>
         <div className={styles.calc}>

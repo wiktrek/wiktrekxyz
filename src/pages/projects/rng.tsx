@@ -30,6 +30,7 @@ const Rng: NextPage = () => {
     <>
       <Head>
         <title>Rng - wiktrek</title>
+        <meta name="description" content="Random number generator" />
       </Head>
       <div className={styles.container}>
         <ul className={styles.ul}>

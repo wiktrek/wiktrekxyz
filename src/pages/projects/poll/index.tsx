@@ -25,6 +25,7 @@ const Poll: NextPage = () => {
       <UserProvider>
         <Head>
           <title>Poll - wiktrek</title>
+          <meta name="description" content="Polls" />
         </Head>
         <div className={styles.container}>
           <div className={styles.questions_box}>

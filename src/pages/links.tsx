@@ -19,6 +19,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Links - wiktrek</title>
+        <meta name="description" content="wiktrek's links" />
       </Head>
       <div className={styles.container}>
         <ul className={styles.links}>

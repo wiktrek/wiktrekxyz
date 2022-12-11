@@ -121,6 +121,7 @@ const QuestionCreator: React.FC = () => {
     <>
       <Head>
         <title>Poll create- wiktrek</title>
+        <meta name="description" content="create a poll" />
       </Head>
       <CreateQuestionForm />
     </>
