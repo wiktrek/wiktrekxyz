@@ -7,6 +7,7 @@ import { useUser } from '@auth0/nextjs-auth0';
 import styles from '../../../../styles/pollq.module.scss';
 import { useEffect, useState } from 'react';
 import { map } from 'zod';
+import Head from 'next/head';
 const { v4: uuidv4 } = require('uuid');
 const QuestionPageContenet: React.FC<{
   id: string;
@@ -47,6 +48,9 @@ const QuestionPageContenet: React.FC<{
   if (user?.name === data.question?.ownerEmail) isOwner = true;
   return (
     <>
+      <Head>
+        <meta name="description" content={data.question.question} />
+      </Head>
       <div className={styles.container}>
         {isOwner && <p>This is your poll</p>}
         <div className={styles.yourpoll}>
@@ -95,10 +99,15 @@ const QuestionPage: NextPage = () => {
     }
     setToken(`${localStorage.getItem('voterToken')}`);
     console.log(token);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (!id || typeof id !== 'string') {
     return <div>No ID</div>;
   }
-  return <QuestionPageContenet id={id} token={token} email={`${user?.name}`} />;
+  return (
+    <>
+      <QuestionPageContenet id={id} token={token} email={`${user?.name}`} />;
+    </>
+  );
 };
 export default QuestionPage;
