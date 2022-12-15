@@ -17,6 +17,9 @@ const Home: NextPage = () => {
         <div>
           <ul className={styles.links}>
             <li>
+              <a href="https://info.wiktrek.xyz">info</a>
+            </li>
+            <li>
               <a href="https://term.wiktrek.xyz">Terminal</a>
             </li>
             <li>
