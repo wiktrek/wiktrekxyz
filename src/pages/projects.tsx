@@ -26,6 +26,9 @@ const Home: NextPage = () => {
               <a href="https://three.wiktrek.xyz">three.js</a>
             </li>
             <li>
+              <a href="https://project.wiktrek.xyz">tictactoe</a>
+            </li>
+            <li>
               <Link href="/projects/poll">
                 <a>poll app</a>
               </Link>
@@ -49,11 +52,7 @@ const Home: NextPage = () => {
               </Link>
             </li>
             <h1>future Projects</h1>
-            <li>
-              {/* <Link href="/projects"> */}
-              <a>tic tac toe</a>
-              {/* </Link> */}
-            </li>
+
             <li>
               {/* <Link href="/projects"> */}
               <a> Wheel Spinner</a>
