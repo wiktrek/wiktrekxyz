@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/links.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
@@ -21,8 +20,8 @@ const Home: NextPage = () => {
         <title>Links - wiktrek</title>
         <meta name="description" content="wiktrek's links" />
       </Head>
-      <div className={styles.container}>
-        <ul className={styles.links}>
+      <div className="">
+        <ul className="">
           <li>
             <a href="https://www.instagram.com/wiktrekxyz" target="__blank">
               <FontAwesomeIcon icon={faInstagram} />
