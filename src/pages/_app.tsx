@@ -1,10 +1,9 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import Navbar from './components/navbar';
 import Head from 'next/head';
 import React from 'react';
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -16,7 +15,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="description" content="wiktrek's website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
       <Component {...pageProps} />
     </>
   );

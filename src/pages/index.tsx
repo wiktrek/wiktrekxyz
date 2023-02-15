@@ -7,9 +7,9 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Home - wiktrek</title>
+        <title>Home - wiktrek.xyz</title>
       </Head>
-      <div className=""></div>
+      <div className="">hi</div>
     </>
   );
 };
