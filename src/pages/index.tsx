@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <meta name="description" content="wiktrek's links" />
       </Head>
       <div className="">
-        <ul className="">
+        <ul className="text-white">
           <li>
             <a href="https://www.instagram.com/wiktrekxyz" target="__blank">
               <FontAwesomeIcon icon={faInstagram} />
