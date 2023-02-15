@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         <title>wiktrek.xyz</title>
         <meta name="description" content="wiktrek's links" />
       </Head>
-      <div className="">
+      <div className=" items-center justify-center text-center text-7xl">
         <ul className="text-white">
           <li>
             <a href="https://www.instagram.com/wiktrekxyz" target="__blank">
