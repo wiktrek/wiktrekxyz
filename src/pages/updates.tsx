@@ -20,6 +20,7 @@ const Home: NextPage = () => {
             >
               Link
             </a>
+            <p className=" text-sm">16.02.2023</p>
           </li>
           <li></li>
         </ul>
