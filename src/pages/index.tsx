@@ -12,6 +12,7 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 import { faGlobe, faCode } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+import Link from 'next/link';
 const Home: NextPage = () => {
   return (
     <>
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
         <title>wiktrek.xyz</title>
         <meta name="description" content="wiktrek's links" />
       </Head>
-      <div className=" items-center justify-center text-center text-7xl">
+      <div className="items-center justify-center text-center text-6xl">
         <ul className="text-white">
           <li>
             <a href="https://www.instagram.com/wiktrekxyz" target="__blank">
@@ -51,6 +52,9 @@ const Home: NextPage = () => {
             <a href="https://github.com/wiktrek/wiktrekxyz" target="__blank">
               <FontAwesomeIcon icon={faCode} />
             </a>
+          </li>
+          <li>
+            <Link href="updates">updates</Link>
           </li>
           <li>
             <a href="https://project.wiktrek.xyz/" target="__blank">
