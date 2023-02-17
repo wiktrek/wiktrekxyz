@@ -1,0 +1,19 @@
+{
+  "updates": [
+    {
+      "title": "Mouse trailer",
+      "link": "https://project.wiktrek.xyz/projects/mousetrailer",
+      "date": "17.02.2023"
+    },
+    {
+      "title": "Added update.tsx component",
+      "link": "https://project.wiktrek.xyz/updates",
+      "date": "17.02.2023"
+    },
+    {
+      "title": "You can now delete polls",
+      "link": "https://project.wiktrek.xyz/projects/poll",
+      "date": "16.02.2023"
+    }
+  ]
+}

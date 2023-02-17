@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
+import Update from './components/update';
+import { updates } from './components/updates.json';
 const Home: NextPage = () => {
   return (
     <>
@@ -9,21 +11,16 @@ const Home: NextPage = () => {
         <meta name="description" content="wiktrek's links" />
       </Head>
       <div className="items-center justify-center text-center text-xl">
-        <ul>
-          <li>
-            You can now delete polls{' '}
-            <a
-              className=""
-              href="https://project.wiktrek.xyz/poll"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Link
-            </a>
-            <p className=" text-sm">16.02.2023</p>
-          </li>
-          <li></li>
-        </ul>
+        {updates.map((update) => {
+          return (
+            <Update
+              key={update.title}
+              title={update.title}
+              link={update.link}
+              date={update.date}
+            />
+          );
+        })}
       </div>
     </>
   );
