@@ -16,6 +16,7 @@ const Home: NextPage = () => {
             <Update
               key={update.title}
               title={update.title}
+              desc={update.desc}
               link={update.link}
               date={update.date}
             />

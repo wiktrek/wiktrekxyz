@@ -2,18 +2,27 @@
   "updates": [
     {
       "title": "Mouse trailer",
+      "desc": "",
       "link": "https://project.wiktrek.xyz/projects/mousetrailer",
       "date": "17.02.2023"
     },
     {
       "title": "Added update.tsx component",
+      "desc": "",
       "link": "https://project.wiktrek.xyz/updates",
       "date": "17.02.2023"
     },
     {
       "title": "You can now delete polls",
+      "desc": "",
       "link": "https://project.wiktrek.xyz/projects/poll",
       "date": "16.02.2023"
+    },
+    {
+      "title": "wiktrek.xyz",
+      "desc": "moved all projects from wiktrek.xyz to project.wiktrek.xyz started using tailwindcss on wiktrek.xyz",
+      "link": "https://project.wiktrek.xyz/",
+      "date": "15.02.2023"
     }
   ]
 }
