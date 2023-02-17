@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import Update from './components/update';
-import { updates } from './components/updates.json';
+import json from './components/updatesjson.json';
 const Home: NextPage = () => {
   return (
     <>
@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <meta name="description" content="wiktrek's links" />
       </Head>
       <div className="items-center justify-center text-center text-xl">
-        {updates.map((update) => {
+        {json.updates.map((update) => {
           return (
             <Update
               key={update.title}
