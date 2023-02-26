@@ -15,16 +15,15 @@ export function middleware(req: NextRequest, res: NextResponse) {
     return NextResponse.redirect(a);
   }
   const data = data1.data;
-  let a = 0;
-  console.log(req.nextUrl.pop('/'));
-
+  const link = req.nextUrl.pathname.replace('/', '');
   data.map((item: any) => {
-    if (l === item.name) {
-      NextResponse.redirect(item.redirect);
-      a++;
+    // console.log(link);
+    // console.log('item ' + item.name);
+    if (link === item.name) {
+      console.log(item.redirect);
+      let a = item.redirect;
+      return NextResponse.redirect(a);
     }
   });
-  if (a == 0) return;
-  if (req.nextUrl === `/${data}`) {
-  }
+  // return NextResponse.redirect('https://wiktrek.xyz/');
 }
