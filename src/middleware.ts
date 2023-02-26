@@ -1,7 +1,8 @@
+import { NextApiRequest, NextApiResponse } from 'next';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import data1 from './data/data.json';
-export function middleware(req: NextRequest, res: NextResponse) {
+export function middleware(req: NextRequest, res: NextApiResponse) {
   if (req.nextUrl.pathname.startsWith('/go')) {
     let a = `https://project.wiktrek.xyz/api${req.nextUrl.pathname}`;
     return NextResponse.redirect(a);
@@ -15,14 +16,12 @@ export function middleware(req: NextRequest, res: NextResponse) {
     return NextResponse.redirect(a);
   }
   const data = data1.data;
-  const link = req.nextUrl.pathname.replace('/', '');
   data.map((item: any) => {
     // console.log(link);
     // console.log('item ' + item.name);
-    if (link === item.name) {
+    if (req.nextUrl.pathname === '/' + item.name) {
       console.log(item.redirect);
-      let a = item.redirect;
-      return NextResponse.redirect(a);
+      return res.redirect(item.redirect);
     }
   });
   // return NextResponse.redirect('https://wiktrek.xyz/');
