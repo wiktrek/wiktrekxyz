@@ -17,8 +17,16 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>wiktrek.xyz</title>
-        <meta name="description" content="wiktrek's links" />
+        <title>Home - wiktrek.xyz</title>
+        <meta
+          name="description"
+          content="wiktrek's links, projects - wiktrek.xyz"
+        />
+        <meta name="author" content="wiktrek"></meta>
+        <meta
+          name="keywords"
+          content="wiktrek, wiktrekxyz,dev,wiktrek.xyz, wiktor, wiktorek, wiktrek1232, Wiktorek, website, links, programmer, "
+        />
       </Head>
       <div className="flex h-screen items-center justify-center text-center text-7xl">
         <ul className="text-white">
