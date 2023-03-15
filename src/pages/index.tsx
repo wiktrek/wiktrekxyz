@@ -45,7 +45,6 @@ const Home: NextPage = () => {
               <FontAwesomeIcon icon={faYoutube} />
             </a>
           </li>
-          i
           <li>
             <a href="https://www.twitch.tv/wiktrek1232" target="__blank">
               <FontAwesomeIcon icon={faTwitch} />

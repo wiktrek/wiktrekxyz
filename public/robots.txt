@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://wiktrek.xyz/sitemap.xml
