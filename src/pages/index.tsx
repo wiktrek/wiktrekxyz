@@ -25,7 +25,9 @@ const Home: NextPage = () => {
         <meta name="author" content="wiktrek"></meta>
         <meta
           name="keywords"
-          content="wiktrek, wiktrekxyz,dev,wiktrek.xyz, wiktor, wiktorek, wiktrek1232, Wiktorek, website, links, programmer, "
+          content="wiktrek, wiktrekxyz,dev,wiktrek.xyz, wiktor, wiktorek, wiktrek1232, Wiktorek, website, links, programmer, 
+          projects, poll app, link shortener, random number generator, rng, random number, calculator, calc, todo, rock paper scissors, rps, 
+          portfolio, next.js, type script, poll,link shortener,link shortener google,link shortener free,link shortener custom"
         />
       </Head>
       <div className="flex h-screen items-center justify-center text-center text-7xl">
