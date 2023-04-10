@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <title>Home - wiktrek.xyz</title>
         <meta
           name="description"
-          content="wiktrek's links, projects - wiktrek.xyz"
+          content="wiktrek's links, projects - wiktrek.xyz,"
         />
         <meta name="author" content="wiktrek"></meta>
         <meta
