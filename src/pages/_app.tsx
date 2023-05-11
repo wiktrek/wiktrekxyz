@@ -15,7 +15,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name="description" content="wiktrek's website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Component {...pageProps} className="scroll-smooth scrollbar-none" />
+      <Component {...pageProps} className="" />
     </>
   );
 }
