@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       </Head>
       <main className="scrollbar-none">
         <Navbar />
-        <div className="flex h-screen items-center justify-center text-center text-7xl scrollbar-none">
+        <div className="flex h-screen items-center justify-center text-center text-7xl">
           <div></div>
           <ul className="text-white">
             <li>
