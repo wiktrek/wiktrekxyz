@@ -12,6 +12,7 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 import { faGlobe, faCode } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+import Navbar from './components/navbar';
 import Link from 'next/link';
 const Home: NextPage = () => {
   return (
@@ -30,45 +31,49 @@ const Home: NextPage = () => {
           portfolio, next.js, type script, poll,link shortener,link shortener google,link shortener free,link shortener custom"
         />
       </Head>
-      <div className="flex h-screen items-center justify-center text-center text-7xl">
-        <ul className="text-white">
-          <li>
-            <a href="https://www.instagram.com/wiktrekxyz" target="__blank">
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/wiktrek" target="__blank">
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/@wiktrek" target="__blank">
-              <FontAwesomeIcon icon={faYoutube} />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.twitch.tv/wiktrek1232" target="__blank">
-              <FontAwesomeIcon icon={faTwitch} />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.wiktrek.xyz" target="__blank">
+      <main className="scrollbar-none">
+        <Navbar />
+        <div className="flex h-screen items-center justify-center text-center text-7xl scrollbar-none">
+          <div></div>
+          <ul className="text-white">
+            <li>
+              <a href="https://www.instagram.com/wiktrekxyz" target="__blank">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/wiktrek" target="__blank">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@wiktrek" target="__blank">
+                <FontAwesomeIcon icon={faYoutube} />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.twitch.tv/wiktrek1232" target="__blank">
+                <FontAwesomeIcon icon={faTwitch} />
+              </a>
+            </li>
+            {/* <li> */
+            /* <a href="https://www.wiktrek.xyz" target="__blank">
               <FontAwesomeIcon icon={faGlobe} />
             </a>
-          </li>
-          <li>
-            <a href="https://github.com/wiktrek/wiktrekxyz" target="__blank">
-              <FontAwesomeIcon icon={faCode} />
-            </a>
-          </li>
-          <li>
-            <a href="https://project.wiktrek.xyz/" target="__blank">
-              Projects
-            </a>
-          </li>
-        </ul>
-      </div>
+          </li> */}
+            <li>
+              <a href="https://github.com/wiktrek/wiktrekxyz" target="__blank">
+                <FontAwesomeIcon icon={faCode} />
+              </a>
+            </li>
+            <li>
+              <a href="https://project.wiktrek.xyz/" target="__blank">
+                Projects
+              </a>
+            </li>
+          </ul>
+        </div>
+      </main>
     </>
   );
 };
