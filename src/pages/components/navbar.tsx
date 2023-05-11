@@ -30,7 +30,13 @@ const Navbar: NextPage = () => {
           portfolio, next.js, type script, poll,link shortener,link shortener google,link shortener free,link shortener custom"
         />
       </Head>
-      <div className="text-center text-5xl">wiktrek</div>
+      <div className="text-center text-5xl">
+        <ul>
+          <li>
+            <Link href="/#about">about</Link>
+          </li>
+        </ul>
+      </div>
     </>
   );
 };

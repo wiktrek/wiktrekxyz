@@ -31,47 +31,53 @@ const Home: NextPage = () => {
           portfolio, next.js, type script, poll,link shortener,link shortener google,link shortener free,link shortener custom"
         />
       </Head>
-      <body className="scroll-smooth scrollbar-none">
+      <body className="">
         <Navbar />
         <div className="flex h-screen items-center justify-center text-center text-8xl">
           <div></div>
-          <ul className="text-white">
-            <li>
-              <a href="https://www.instagram.com/wiktrekxyz" target="__blank">
-                <FontAwesomeIcon icon={faInstagram} />
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/wiktrek" target="__blank">
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/@wiktrek" target="__blank">
-                <FontAwesomeIcon icon={faYoutube} />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.twitch.tv/wiktrek1232" target="__blank">
-                <FontAwesomeIcon icon={faTwitch} />
-              </a>
-            </li>
-            {/* <li> */
-            /* <a href="https://www.wiktrek.xyz" target="__blank">
+          <section id="links">
+            <ul className="text-white">
+              <li>
+                <a href="https://www.instagram.com/wiktrekxyz" target="__blank">
+                  <FontAwesomeIcon icon={faInstagram} />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/wiktrek" target="__blank">
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@wiktrek" target="__blank">
+                  <FontAwesomeIcon icon={faYoutube} />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.twitch.tv/wiktrek1232" target="__blank">
+                  <FontAwesomeIcon icon={faTwitch} />
+                </a>
+              </li>
+              {/* <li> */
+              /* <a href="https://www.wiktrek.xyz" target="__blank">
               <FontAwesomeIcon icon={faGlobe} />
             </a>
           </li> */}
-            <li>
-              <a href="https://github.com/wiktrek/wiktrekxyz" target="__blank">
-                <FontAwesomeIcon icon={faCode} />
-              </a>
-            </li>
-            <li>
-              <a href="https://project.wiktrek.xyz/" target="__blank">
-                Projects
-              </a>
-            </li>
-          </ul>
+              <li>
+                <a
+                  href="https://github.com/wiktrek/wiktrekxyz"
+                  target="__blank"
+                >
+                  <FontAwesomeIcon icon={faCode} />
+                </a>
+              </li>
+              <li>
+                <a href="https://project.wiktrek.xyz/" target="__blank">
+                  Projects
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section id="about"></section>
         </div>
       </body>
     </>
