@@ -31,9 +31,9 @@ const Home: NextPage = () => {
           portfolio, next.js, type script, poll,link shortener,link shortener google,link shortener free,link shortener custom"
         />
       </Head>
-      <main className="scrollbar-none">
+      <main>
         <Navbar />
-        <div className="flex h-screen items-center justify-center text-center text-7xl">
+        <div className="flex h-screen items-center justify-center text-center text-8xl scrollbar scrollbar-thumb-red-500">
           <div></div>
           <ul className="text-white">
             <li>
