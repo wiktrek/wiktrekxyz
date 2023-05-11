@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       </Head>
       <body className="scroll-smooth scrollbar-none">
         <Navbar />
-        <div className="flex h-screen items-center justify-center text-center text-8xl">
+        <div className="flex h-screen items-center justify-center space-y-5 text-center text-8xl">
           <div></div>
           <section id="links">
             <ul className="text-white">
@@ -57,11 +57,6 @@ const Home: NextPage = () => {
                   <FontAwesomeIcon icon={faTwitch} />
                 </a>
               </li>
-              {/* <li> */
-              /* <a href="https://www.wiktrek.xyz" target="__blank">
-              <FontAwesomeIcon icon={faGlobe} />
-            </a>
-          </li> */}
               <li>
                 <a
                   href="https://github.com/wiktrek/wiktrekxyz"
@@ -77,7 +72,9 @@ const Home: NextPage = () => {
               </li>
             </ul>
           </section>
-          <section id="about"></section>
+          <section id="about">
+            <a>Programmer from Poland</a>
+          </section>
         </div>
       </body>
     </>
