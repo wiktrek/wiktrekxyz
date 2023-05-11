@@ -33,9 +33,12 @@ const Home: NextPage = () => {
       </Head>
       <body className="scroll-smooth scrollbar-none">
         <Navbar />
-        <div className="flex h-screen items-center justify-center space-y-5 text-center text-8xl">
+        <div>
           <div></div>
-          <section id="links">
+          <section
+            id="links"
+            className="flex h-screen items-center justify-center space-y-5 text-center text-8xl"
+          >
             <ul className="text-white">
               <li>
                 <a href="https://www.instagram.com/wiktrekxyz" target="__blank">
@@ -72,9 +75,11 @@ const Home: NextPage = () => {
               </li>
             </ul>
           </section>
-          <section id="about">
-            <a>Programmer from Poland</a>
-          </section>
+          {/* <section id="about">
+            <div className="h-64 text-center text-7xl">
+              <a>Programmer from Poland</a>
+            </div>
+          </section> */}
         </div>
       </body>
     </>
