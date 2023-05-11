@@ -14,6 +14,7 @@ import { faGlobe, faCode } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import Link from 'next/link';
 const Navbar: NextPage = () => {
+  let links = ['links', 'about'];
   return (
     <>
       <Head>
@@ -30,12 +31,14 @@ const Navbar: NextPage = () => {
           portfolio, next.js, type script, poll,link shortener,link shortener google,link shortener free,link shortener custom"
         />
       </Head>
-      <div className="text-center text-5xl">
-        <ul>
-          <li>
-            <Link href="/#about">about</Link>
-          </li>
-        </ul>
+      <div className="h-4 w-screen list-none text-center text-5xl">
+        {links.map((link) => {
+          return (
+            <Link href={'/#' + link} key={link}>
+              <button className="px-6 py-2">{link}</button>
+            </Link>
+          );
+        })}
       </div>
     </>
   );
