@@ -16,7 +16,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "autoprefixer": "^10.4.13",
     "copy-to-clipboard": "^3.3.2",
-    "next": "12.2.5",
+    "next": "13.4.4",
     "postcss": "^8.4.21",
     "prettier-plugin-tailwindcss": "^0.2.3",
     "react": "18.2.0",
