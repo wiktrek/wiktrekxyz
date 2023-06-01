@@ -13,9 +13,9 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import Navbar from '~/components/navbar';
-import Post from '~/components/post';
-export default async function Home() {
+import Navbar from '../components/navbar';
+import Post from '../components/post';
+export default async function Page() {
   return (
     <div>
       <div></div>
