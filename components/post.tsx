@@ -20,7 +20,7 @@ const Post = (props: props) => {
         <Image
           src={props.img}
           alt={props.title}
-          className="mx-auto object-cover py-4 md:h-48 xl:h-52"
+          className=""
           height={40}
           width={80}
         />

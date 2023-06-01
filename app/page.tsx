@@ -71,14 +71,14 @@ export default async function Page() {
 
           </section> */}
       <section id="posts">
-        <div>
+        {/* <div>
           <Post
             title="post"
             description="desc"
             date="01.06.2023"
             img="https://avatars.githubusercontent.com/u/61013382?v=4"
           ></Post>
-        </div>
+        </div> */}
       </section>
     </div>
   );
