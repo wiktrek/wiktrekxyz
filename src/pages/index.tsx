@@ -6,14 +6,16 @@ import {
   faInstagram,
   faTwitch,
   faYoutube,
+  faDiscord,
 } from '@fortawesome/free-brands-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
-import { faGlobe, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import Navbar from './components/navbar';
-import Link from 'next/link';
+import Post from './components/post';
+// import Link from 'next/link';
 const Home: NextPage = () => {
   return (
     <>
@@ -51,13 +53,22 @@ const Home: NextPage = () => {
                 </a>
               </li>
               <li>
-                <a href="https://www.youtube.com/@wiktrek" target="__blank">
-                  <FontAwesomeIcon icon={faYoutube} />
+                <a
+                  href="https://discord.com/users/499665258038820866"
+                  target="__blank"
+                >
+                  <FontAwesomeIcon icon={faDiscord} />
                 </a>
               </li>
+
               <li>
                 <a href="https://www.twitch.tv/wiktrek1232" target="__blank">
                   <FontAwesomeIcon icon={faTwitch} />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@wiktrek" target="__blank">
+                  <FontAwesomeIcon icon={faYoutube} />
                 </a>
               </li>
               <li>
@@ -77,9 +88,15 @@ const Home: NextPage = () => {
           </section>
           {/* <section id="about">
             <div className="h-64 text-center text-7xl">
-              <a>Programmer from Poland</a>
+              <a>I'm a programmer from Poland</a>
             </div>
+
           </section> */}
+          <section id="posts">
+            <div>
+              <Post></Post>
+            </div>
+          </section>
         </div>
       </body>
     </>
