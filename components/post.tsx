@@ -12,7 +12,7 @@ interface props {
 const Post = (props: props) => {
   return (
     <>
-      <div className="h-4 w-screen list-none text-center text-5xl ">
+      <div className="h-4 w-screen list-none text-center text-5xl transition-all hover:scale-105 border-collapse border border-zinc-700 rounded-lg">
         <p>
           <a>{props.title}</a>
         </p>
@@ -21,8 +21,8 @@ const Post = (props: props) => {
           src={props.img}
           alt={props.title}
           className="mx-auto object-cover py-4 md:h-48 xl:h-52"
-          height={400}
-          width={800}
+          height={40}
+          width={80}
         />
         <p className="text-xl">{props.description}</p>
       </div>

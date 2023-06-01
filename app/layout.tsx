@@ -6,7 +6,9 @@ export default function DashboardLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="scroll-smooth scrollbar-none">
+        <main className="">{children}</main>
+      </body>
     </html>
   );
 }

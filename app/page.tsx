@@ -18,7 +18,6 @@ import Post from '../components/post';
 export default async function Page() {
   return (
     <div>
-      <div></div>
       <section
         id="links"
         className="flex h-screen items-center justify-center space-y-5 text-center text-8xl"
