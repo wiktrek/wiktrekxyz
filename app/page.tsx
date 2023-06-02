@@ -71,7 +71,7 @@ export default async function Page() {
             </div>
 
           </section> */}
-      <section id="skills" className="flex w-full flex-col h-44">
+      <section id="skills" className="flex w-full flex-col h-72 border ">
         <Skill
           skill="rust"
           img="https://avatars.githubusercontent.com/u/5430905?s=200&v=4"
