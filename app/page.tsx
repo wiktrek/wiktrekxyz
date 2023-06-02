@@ -71,13 +71,13 @@ export default async function Page() {
             </div>
 
           </section> */}
-      <section id="skills" className="flex w-full flex-col h-72 border ">
+      {/* <section id="skills" className="flex flex-col h-72 border ">
         <Skill
           skill="rust"
           img="https://avatars.githubusercontent.com/u/5430905?s=200&v=4"
           description="started learing rust recently"
         />
-      </section>
+      </section> */}
       <section id="posts">
         {/* <div>
           <Post

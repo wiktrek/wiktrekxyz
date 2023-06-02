@@ -10,7 +10,7 @@ interface props {
 const Skill = (props: props) => {
   return (
     <>
-      <div className=" flex text-center items-center justify-center flex-col h-24 rounded border border-zinc-600">
+      <div className=" flex text-center items-center justify-center flex-col h-24 w-48 rounded-xl border border-zinc-600">
         <p>
           <a>{props.skill}</a>
         </p>
