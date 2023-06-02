@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import data1 from '../data/data.json';
+import data1 from './data/data.json';
 export function middleware(req: NextRequest, res: NextResponse) {
   if (req.nextUrl.pathname.startsWith('/go')) {
     let a = `https://project.wiktrek.xyz/api${req.nextUrl.pathname}`;
