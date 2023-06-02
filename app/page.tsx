@@ -15,6 +15,7 @@ import { faCode } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import Navbar from '../components/navbar';
 import Post from '../components/post';
+import Skill from '../components/skill';
 export default async function Page() {
   return (
     <div>
@@ -70,6 +71,13 @@ export default async function Page() {
             </div>
 
           </section> */}
+      <section id="skills" className="flex w-full flex-col h-44">
+        <Skill
+          skill="rust"
+          img="https://avatars.githubusercontent.com/u/5430905?s=200&v=4"
+          description="started learing rust recently"
+        />
+      </section>
       <section id="posts">
         {/* <div>
           <Post
