@@ -14,6 +14,9 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^13.4.5",
     "autoprefixer": "^10.4.13",
     "copy-to-clipboard": "^3.3.2",
     "next": "13.4.4",
@@ -21,11 +24,12 @@
     "prettier-plugin-tailwindcss": "^0.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwind-scrollbar": "^3.0.1",
     "react-query": "^3.39.2",
+    "tailwind-scrollbar": "^3.0.1",
     "tailwindcss": "3.3.2"
   },
   "devDependencies": {
+    "@types/mdx": "^2.0.5",
     "@types/node": "18.7.13",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
