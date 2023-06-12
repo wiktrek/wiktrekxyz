@@ -1,9 +1,18 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const sitemap = [
     {
       url: 'https://wiktrek.xyz',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://svelte.wiktrek.xyz',
+      lastModified: new Date(),
+    },
+
+    {
+      url: 'https://terminal.wiktrek.xyz',
       lastModified: new Date(),
     },
     {
@@ -15,4 +24,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
   ];
+
+  return sitemap;
 }
