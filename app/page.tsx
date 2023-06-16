@@ -1,7 +1,6 @@
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import getPosts from '../helpers/getPosts';
 import {
   faGithub,
   faInstagram,
@@ -16,9 +15,7 @@ import { faCode } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import Post from '../components/post';
 
-export default async function Home({
-  posts,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default async function Home() {
   return (
     <div>
       <section
@@ -67,24 +64,7 @@ export default async function Home({
           </li>
         </ul>
       </section>
-      <section id="posts">
-        {posts.map((post: any) => {
-          return (
-            <Post
-              key={post.slug}
-              title={post.data.title}
-              date={post.data.date}
-              description={post.data.description}
-              slug={post.slug}
-            />
-          );
-        })}
-      </section>
+      <section id="posts"></section>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const posts = getPosts();
-  return { props: { posts } };
 }
