@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+  experimental: {
+    serverActions: true,
+  },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'github.com' },

@@ -1,6 +1,7 @@
-import type { NextPage } from 'next';
+import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import getPosts from '../helpers/getPosts';
 import {
   faGithub,
   faInstagram,
@@ -13,11 +14,11 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import Navbar from '../components/navbar';
 import Post from '../components/post';
-import Skill from '../components/skill';
 
-export default async function Page() {
+export default async function Home({
+  posts,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div>
       <section
@@ -66,29 +67,24 @@ export default async function Page() {
           </li>
         </ul>
       </section>
-      {/* <section id="about">
-            <div className="h-64 text-center text-7xl">
-              <a>I'm a programmer from Poland</a>
-            </div>
-
-          </section> */}
-      {/* <section id="skills" className="flex flex-col h-72 border ">
-        <Skill
-          skill="rust"
-          img="https://avatars.githubusercontent.com/u/5430905?s=200&v=4"
-          description="started learing rust recently"
-        />
-      </section> */}
       <section id="posts">
-        {/* <div>
-          <Post
-            title="post"
-            description="desc"
-            date="01.06.2023"
-            img="https://avatars.githubusercontent.com/u/61013382?v=4"
-          ></Post>
-        </div> */}
+        {posts.map((post: any) => {
+          return (
+            <Post
+              key={post.slug}
+              title={post.data.title}
+              date={post.data.date}
+              description={post.data.description}
+              slug={post.slug}
+            />
+          );
+        })}
       </section>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const posts = getPosts();
+  return { props: { posts } };
 }
