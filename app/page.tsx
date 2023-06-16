@@ -16,6 +16,7 @@ import React from 'react';
 import Navbar from '../components/navbar';
 import Post from '../components/post';
 import Skill from '../components/skill';
+
 export default async function Page() {
   return (
     <div>
