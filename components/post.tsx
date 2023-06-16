@@ -3,10 +3,12 @@ import Head from 'next/head';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 interface props {
   title: string;
   date: string;
-  img: string;
+  slug: string;
+  key: string;
   description: string;
 }
 const Post = (props: props) => {
@@ -17,14 +19,10 @@ const Post = (props: props) => {
           <a>{props.title}</a>
         </p>
         <p>{props.date}</p>
-        <Image
-          src={props.img}
-          alt={props.title}
-          className=""
-          height={40}
-          width={80}
-        />
         <p className="text-xl">{props.description}</p>
+        <p>
+          <Link href={'/blog/' + props.slug}></Link>
+        </p>
       </div>
     </>
   );
