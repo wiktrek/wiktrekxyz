@@ -14,12 +14,12 @@ export default async function Page() {
         <div>
           <ul className="">
             <li>
-              <Link href="/projects/poll">
-                <a>poll app</a>
-              </Link>
+              <a href="https:://project.wiktrek.xyz/projects/poll">poll app</a>
             </li>
             <li>
-              <Link href="/projects/url">Link shortener</Link>
+              <a href="https:://project.wiktrek.xyz/projects/url">
+                Link shortener
+              </a>
             </li>
             <li>
               <a href="https://svelte.wiktrek.xyz">svelte</a>
@@ -47,34 +47,36 @@ export default async function Page() {
             </li>
 
             <li>
-              <Link href="/projects/pokemon">pokemon</Link>
+              <a href="https:://project.wiktrek.xyz/projects/pokemon">
+                pokemon
+              </a>
             </li>
             <li>
-              <Link href="/projects/calculator">
-                <a>calculator</a>
-              </Link>
+              <a href="https:://project.wiktrek.xyz/projects/calculator">
+                calculator
+              </a>
             </li>
             <li>
-              <Link href="/projects/rps">
-                <a>rock paper scissors</a>
-              </Link>
+              <a href="https:://project.wiktrek.xyz/projects/rps">
+                rock paper scissors
+              </a>
             </li>
             <li>
-              <Link href="/projects/rng">
-                <a>random number generator</a>
-              </Link>
+              <a href="https:://project.wiktrek.xyz/projects/rng">
+                random number generator
+              </a>
             </li>
             <li>
-              <Link href="/projects/mousetrailer">
-                <a>mouse trailer</a>
-              </Link>
+              <a href="https:://project.wiktrek.xyz/projects/mousetrailer">
+                mouse trailer
+              </a>
             </li>
             <h1>future Projects</h1>
 
             <li>
-              {/* <Link href="/projects"> */}
+              {/* <a href="https:://project.wiktrek.xyz/projects"> */}
               <a> Wheel Spinner</a>
-              {/* </Link> */}
+              {/* </a> */}
             </li>
           </ul>
         </div>

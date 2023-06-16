@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
+      url: 'https://wiktrek.xyz/projects',
+      lastModified: new Date(),
+    },
+    {
       url: 'https://svelte.wiktrek.xyz',
       lastModified: new Date(),
     },
