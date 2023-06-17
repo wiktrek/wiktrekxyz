@@ -1,3 +1,4 @@
+'use client';
 import type { InferGetServerSidePropsType, GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,22 +15,11 @@ config.autoAddCss = false;
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import Post from '../components/post';
-import { glob } from 'glob';
-
-async function getPosts() {
-  'use server';
-  const pages = await glob('**/blog/**/page.tsx');
-  console.log('pages: ' + pages);
-  pages.map(async (post) => {
-    const a = `${process.cwd()}/${post}`.replaceAll('\\', '/');
-    console.log(a);
-    // const { data } = await import('./blog/test/page.tsx');
-    // console.log('a' + data);
-  });
-}
+import { getPosts } from './helper';
 
 export default async function Home() {
-  await getPosts();
+  const posts = await getPosts();
+
   return (
     <div>
       <section
@@ -78,7 +68,15 @@ export default async function Home() {
           </li>
         </ul>
       </section>
-      <section id="posts"></section>
+      <section id="posts">
+        {posts.map((post) => {
+          return (
+            <div key={post.slug}>
+              <a>fortnite</a>
+            </div>
+          );
+        })}
+      </section>
     </div>
   );
 }
