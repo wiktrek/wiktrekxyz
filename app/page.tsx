@@ -1,4 +1,4 @@
-import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
+import type { InferGetServerSidePropsType, GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -14,10 +14,11 @@ config.autoAddCss = false;
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import Post from '../components/post';
-import { getPosts, getData } from './blog/helper';
-export default async function Home() {
-  const posts = await getPosts();
-  const postsData = await getData(posts);
+import { getPosts } from './blog/helper';
+export default async function Home({
+  posts,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  console.log('a ' + posts);
   return (
     <div>
       <section
@@ -70,3 +71,10 @@ export default async function Home() {
     </div>
   );
 }
+export const getServerSideProps: GetServerSideProps<{
+  posts: string;
+}> = async () => {
+  const posts = await getPosts();
+  console.log(posts);
+  return { props: { posts } };
+};
