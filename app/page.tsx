@@ -18,7 +18,7 @@ import Post from '../components/post';
 import { getPosts } from './helper';
 
 export default async function Home() {
-  const posts = await getPosts();
+  // const posts = await getPosts();
 
   return (
     <div>
@@ -69,13 +69,13 @@ export default async function Home() {
         </ul>
       </section>
       <section id="posts">
-        {posts.map((post) => {
+        {/* {posts.map((post) => {
           return (
             <div key={post.slug}>
               <a>fortnite</a>
             </div>
           );
-        })}
+        })} */}
       </section>
     </div>
   );

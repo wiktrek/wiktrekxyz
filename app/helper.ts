@@ -13,6 +13,7 @@ export async function getPosts() {
   await pages.map(async (post) => {
     const a = `${process.cwd()}/${post}`.replaceAll('\\', '/');
     console.log(a);
+    // @ts-ignore
     const { data } = await import('./blog/test/page.tsx');
     pages_data.push(data);
   });
