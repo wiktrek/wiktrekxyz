@@ -31,7 +31,7 @@
     "firebaseconfig.ts",
     "data/pages/api/auth/[nextauth].js",
     ".next/types/**/*.ts"
-  ],
+, "app/blog/test/page.tsx"  ],
   "exclude": [
     "node_modules"
   ]

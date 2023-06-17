@@ -14,9 +14,10 @@ config.autoAddCss = false;
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import Post from '../components/post';
-import getPosts from './blog/helper';
+import { getPosts, getData } from './blog/helper';
 export default async function Home() {
-  getPosts();
+  const posts = await getPosts();
+  const postsData = await getData(posts);
   return (
     <div>
       <section
