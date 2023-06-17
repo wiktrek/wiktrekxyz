@@ -14,11 +14,22 @@ config.autoAddCss = false;
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import Post from '../components/post';
-import { getPosts } from './blog/helper';
-export default async function Home({
-  posts,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  console.log('a ' + posts);
+import { glob } from 'glob';
+
+async function getPosts() {
+  'use server';
+  const pages = await glob('**/blog/**/page.tsx');
+  console.log('pages: ' + pages);
+  pages.map(async (post) => {
+    const a = `${process.cwd()}/${post}`.replaceAll('\\', '/');
+    console.log(a);
+    // const { data } = await import('./blog/test/page.tsx');
+    // console.log('a' + data);
+  });
+}
+
+export default async function Home() {
+  await getPosts();
   return (
     <div>
       <section
@@ -71,10 +82,3 @@ export default async function Home({
     </div>
   );
 }
-export const getServerSideProps: GetServerSideProps<{
-  posts: string;
-}> = async () => {
-  const posts = await getPosts();
-  console.log(posts);
-  return { props: { posts } };
-};

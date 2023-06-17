@@ -11,8 +11,9 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
