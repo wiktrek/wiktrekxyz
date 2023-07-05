@@ -2,12 +2,16 @@
 import type { BlogSchema } from "../content/config";
 
 export interface Props {
-  href?: string;
   frontmatter: BlogSchema;
   secHeading?: boolean;
 }
+const { title, description, author, tags, pubDate, img} = Astro.props.frontmatter
 ---
-<main>
-
-    <a>{Astro.props.frontmatter.title}</a>
-</main>
+<div class="bg-transparent text-white w-64 h-72 m-auto rounded-2xl text-xl border-white border hover:scale-105 cursor-pointer transition-all p-4">
+    <h4 class="text-center text-lg font-semibold">{title}</h4>
+    <p class="text-lg">{`${pubDate.toLocaleString('en', { month: 'long' })} ${pubDate.getDate()} ${pubDate.getFullYear()}`}</p>
+    {
+    img && <img src={img} height={400} width={800} alt={title} class="mx-auto" />
+    }
+    <p  class="text-sm line-clamp-2 pt-2">{description}</p>
+</div>

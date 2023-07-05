@@ -9,8 +9,7 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 ---
 
 <Layout title="wiktrek.xyz">
-	<main class=" justify-center text-center items-center">
-		<a class=" text-black">astro</a>
+	<main class=" justify-center text-center items-center bg-[#0D0A0B] h-screen text-[#FA9F42] font-mono text-2xl">
 	{
       featuredPosts.length > 0 && (
         <>
@@ -18,11 +17,13 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
             <h2>Blog posts</h2>
             <ul>
               {featuredPosts.map(({ data }) => (
+              <a href={`/blog/${data.postSlug}`}>
                 <Card
-                  href={`/posts/${data.postSlug}`}
                   frontmatter={data}
                   secHeading={false}
                 />
+              </a>
+
               ))}
             </ul>
           </section>

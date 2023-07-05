@@ -1,5 +1,5 @@
 ---
-title: 'How to make ...'
+title: 'Astro'
 author: 'wiktrek'
 postSlug: test
 featured: true
@@ -9,7 +9,7 @@ tags:
   - posts
 pubDate: '05.07.2023'
 updatedDate: '05.07.2023'
-description: 'very long description'
+description: 'Nextjs -> Astro'
 ---
 
 Test
