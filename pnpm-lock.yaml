@@ -2,16 +2,20 @@ lockfileVersion: 5.4
 
 specifiers:
   '@astrojs/mdx': ^0.19.7
+  '@astrojs/rss': ^2.4.3
   '@astrojs/sitemap': ^1.3.3
   '@astrojs/tailwind': ^4.0.0
   astro: ^2.6.5
+  tailwind-scrollbar: ^3.0.4
   tailwindcss: ^3.0.24
 
 dependencies:
   '@astrojs/mdx': 0.19.7_astro@2.7.4
+  '@astrojs/rss': 2.4.3
   '@astrojs/sitemap': 1.3.3
   '@astrojs/tailwind': 4.0.0_fu2qmncwpa4tgpf2bf4q3egjeu
   astro: 2.7.4
+  tailwind-scrollbar: 3.0.4_tailwindcss@3.3.2
   tailwindcss: 3.3.2
 
 packages:
@@ -111,6 +115,13 @@ packages:
     engines: {node: '>=16.12.0'}
     dependencies:
       prismjs: 1.29.0
+    dev: false
+
+  /@astrojs/rss/2.4.3:
+    resolution: {integrity: sha512-Dc8lxsXiDlnxONVIUuc3ohO1+vV1Hp9fRFdUianOola0S9/xv/6FzIHhkQ62MkaFSlcZm5uIOllRWNKVvuFuoA==}
+    dependencies:
+      fast-xml-parser: 4.2.5
+      kleur: 4.1.5
     dev: false
 
   /@astrojs/sitemap/1.3.3:
@@ -1519,6 +1530,13 @@ packages:
       glob-parent: 5.1.2
       merge2: 1.4.1
       micromatch: 4.0.5
+    dev: false
+
+  /fast-xml-parser/4.2.5:
+    resolution: {integrity: sha512-B9/wizE4WngqQftFPmdaMYlXoJlJOYxGQOanC77fq9k8+Z0v5dDSVh+3glErdIROP//s/jgb7ZuxKfB8nVyo0g==}
+    hasBin: true
+    dependencies:
+      strnum: 1.0.5
     dev: false
 
   /fastq/1.15.0:
@@ -3382,6 +3400,10 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
+  /strnum/1.0.5:
+    resolution: {integrity: sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==}
+    dev: false
+
   /style-to-object/0.4.1:
     resolution: {integrity: sha512-HFpbb5gr2ypci7Qw+IOhnP2zOU7e77b+rzM+wTzXzfi1PrtBCX0E7Pk4wL4iTLnhzZ+JgEGAhX81ebTg/aYjQw==}
     dependencies:
@@ -3433,6 +3455,15 @@ packages:
     dependencies:
       '@pkgr/utils': 2.4.1
       tslib: 2.6.0
+    dev: false
+
+  /tailwind-scrollbar/3.0.4_tailwindcss@3.3.2:
+    resolution: {integrity: sha512-X/QBsn/C5u9x6/YvTc1Zo7b09Gqs5BfDe0UK/8LDQUv8IEBKF+p2ISTRwvAr50MH0hn/wTyCEOann7uXoa1/2Q==}
+    engines: {node: '>=12.13.0'}
+    peerDependencies:
+      tailwindcss: 3.x
+    dependencies:
+      tailwindcss: 3.3.2
     dev: false
 
   /tailwindcss/3.3.2:

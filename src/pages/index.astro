@@ -9,11 +9,15 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 ---
 
 <Layout title="wiktrek.xyz">
-	<main class=" justify-center text-center items-center bg-[#0D0A0B] h-screen text-[#FA9F42] font-mono text-2xl">
+	<main class=" justify-center text-center items-center font-mono text-2xl pt-4 h-screen">
+    <section id="links" class="text-5xl">
+    <a href="https://project.wiktrek.xyz">
+      Projects
+    </a>
+    </section>
 	{
       featuredPosts.length > 0 && (
-        <>
-          <section id="featured">
+          <section id="featured" class="bg-[#0D0A0B]">
             <h2>Blog posts</h2>
             <ul>
               {featuredPosts.map(({ data }) => (
@@ -26,8 +30,7 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
               ))}
             </ul>
-          </section>
-        </>
+            </section>
 		
       )
 	}
