@@ -1,3 +1,0 @@
-User-Agent: *
-Allow: /
-Sitemap: https://wiktrek.xyz/sitemap.xml
