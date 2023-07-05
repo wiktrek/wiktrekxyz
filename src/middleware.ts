@@ -14,13 +14,9 @@ export const onRequest = defineMiddleware(async (context, next) => {
     let a = `https://project.wiktrek.xyz/projects/poll`;
     return context.redirect(a);
   }
-  //   console.log(data);
-  data.map((item: { name: string; redirect: string }) => {
-    if (path.replace('/', '') === item.name) {
-      console.log(item.redirect);
-      return context.redirect(item.redirect);
-    }
-  });
+  if (path === '/github') {
+    return context.redirect('https://github.com/wiktrek');
+  }
 
   return next();
 });
