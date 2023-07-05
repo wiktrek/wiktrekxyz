@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import sortPosts from "../utils/sortPosts";
+import Link from '../components/links.astro'
 const posts = await getCollection("blog");
 const sortedPosts = sortPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
@@ -10,23 +11,17 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
 <Layout title="wiktrek.xyz">
 	<main class=" justify-center text-center items-center font-mono text-2xl pt-4 h-screen">
-    <section id="links" class="text-5xl">
-    <a href="https://project.wiktrek.xyz">
-      Projects
-    </a>
-    </section>
+   <Link />
 	{
       featuredPosts.length > 0 && (
-          <section id="featured" class="bg-[#0D0A0B]">
+          <section id="blog" class="bg-[#0D0A0B] ">
             <h2>Blog posts</h2>
-            <ul>
+            <ul class="pt-4 grid gap-5">
               {featuredPosts.map(({ data }) => (
-              <a href={`/blog/${data.postSlug}`}>
                 <Card
                   frontmatter={data}
                   secHeading={false}
                 />
-              </a>
 
               ))}
             </ul>

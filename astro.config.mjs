@@ -2,7 +2,12 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), mdx(), sitemap()],
+  site: 'https://wiktrek.xyz',
+  integrations: [tailwind(), mdx(), sitemap({
+    customPages: ['https://project.wiktrek.xyz', 'https://svelte.wiktrek.xyz', 'https://term.wiktrek.xyz/', 'https://project.wiktrek.xyz/projects/url', 'https://project.wiktrek.xyz/projects/poll']
+  }), react()]
 });

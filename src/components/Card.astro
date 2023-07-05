@@ -5,13 +5,21 @@ export interface Props {
   frontmatter: BlogSchema;
   secHeading?: boolean;
 }
-const { title, description, author, tags, pubDate, img} = Astro.props.frontmatter
+const { title, description, author, tags, pubDate, img, postSlug} = Astro.props.frontmatter
+function redirect() {
+  Astro.redirect(`/blog/#{postSlug}`);
+}
 ---
+
 <div class="bg-transparent text-white w-64 h-72 m-auto rounded-2xl text-xl border-white border hover:scale-105 cursor-pointer transition-all p-4">
-    <h4 class="text-center text-lg font-semibold">{title}</h4>
+<a href={`/blog/${postSlug}`}>
+  
+    <p class="text-center text-lg font-semibold">{title}</p>
     <p class="text-lg">{getDate(pubDate)}</p>
     {
     img && <img src={img} height={400} width={800} alt={title} class="mx-auto" />
     }
     <p  class="text-sm line-clamp-2 pt-2">{description}</p>
+  
+</a>
 </div>

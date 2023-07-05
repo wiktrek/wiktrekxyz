@@ -21,15 +21,16 @@ if (img !== undefined) {
 	<body class="bg-[#0D0A0B] justify-center text-center items-center text-[#f4f4ee]">
 		
 		<main>
-			<article>
+			<article class="mx-auto w-[50rem] h-screen text-2xl">
 				{image_exists && <img width={720} height={360} src={img} alt="" />}
-				<h1 class=" text-3xl text-[#FA9F42] ">{title}</h1>
+				<h1 class="text-4xl text-[#FA9F42]">{title}</h1>
+				<h2 class="text-3xl text-[#FA9F42]">{description}</h2>
 				{
 					updatedDate && (
 						<div class="">Last updated: {getDate(updatedDate)}</div>
 					)
 				}
-				<slot class="" />
+				<slot />
 			</article>
 		</main>
 	</body>
