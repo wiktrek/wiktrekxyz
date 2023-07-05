@@ -1,0 +1,13 @@
+---
+import type { BlogSchema } from "../content/config";
+
+export interface Props {
+  href?: string;
+  frontmatter: BlogSchema;
+  secHeading?: boolean;
+}
+---
+<main>
+
+    <a>{Astro.props.frontmatter.title}</a>
+</main>

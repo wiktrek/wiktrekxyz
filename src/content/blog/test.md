@@ -1,5 +1,5 @@
 ---
-title: 'Test'
+title: 'How to make ...'
 author: 'wiktrek'
 postSlug: test
 featured: true
@@ -9,8 +9,9 @@ tags:
   - posts
 pubDate: '05.07.2023'
 updatedDate: '05.07.2023'
-img: test
-description: description
+description: 'very long description'
 ---
 
-# Test
+Test
+
+this is my blog post

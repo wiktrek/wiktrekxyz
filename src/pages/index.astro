@@ -1,9 +1,34 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import sortPosts from "../utils/sortPosts";
+const posts = await getCollection("blog");
+const sortedPosts = sortPosts(posts);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 ---
 
 <Layout title="wiktrek.xyz">
 	<main class=" justify-center text-center items-center">
 		<a class=" text-black">astro</a>
+	{
+      featuredPosts.length > 0 && (
+        <>
+          <section id="featured">
+            <h2>Blog posts</h2>
+            <ul>
+              {featuredPosts.map(({ data }) => (
+                <Card
+                  href={`/posts/${data.postSlug}`}
+                  frontmatter={data}
+                  secHeading={false}
+                />
+              ))}
+            </ul>
+          </section>
+        </>
+		
+      )
+	}
 	</main>
 </Layout>
