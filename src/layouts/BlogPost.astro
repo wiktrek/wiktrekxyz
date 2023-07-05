@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-
-
+import { getDate} from '../utils/date'
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, img } = Astro.props;
@@ -9,7 +8,6 @@ let image_exists = false;
 if (img !== undefined) {
 	image_exists = true 
 }
-console.log(image_exists)
 ---
 
 <!DOCTYPE html>
@@ -20,20 +18,18 @@ console.log(image_exists)
 	</head>
 
 
-	<body class="bg-[#0d0a0b] text-[#FA9F42] justify-center text-center items-center">
+	<body class="bg-[#0D0A0B] justify-center text-center items-center text-[#f4f4ee] text-2xl">
 		
 		<main>
 			<article>
 				{image_exists && <img width={720} height={360} src={img} alt="" />}
-				<h1 class=" text-3xl">{title}</h1>
+				<h1 class=" text-3xl text-[#FA9F42] ">{title}</h1>
 				{
 					updatedDate && (
-						<div class="last-updated-on">
-
-							</div>
+						<div class="">Last updated: {getDate(updatedDate)}</div>
 					)
 				}
-				<slot />
+				<slot class="" />
 			</article>
 		</main>
 	</body>
