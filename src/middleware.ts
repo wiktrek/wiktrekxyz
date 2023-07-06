@@ -1,5 +1,4 @@
 import { defineMiddleware } from 'astro/middleware';
-import { data } from '../data/data.json';
 export const onRequest = defineMiddleware(async (context, next) => {
   const path = context.url.pathname;
   if (path.startsWith('/go')) {
@@ -17,6 +16,5 @@ export const onRequest = defineMiddleware(async (context, next) => {
   if (path === '/github') {
     return context.redirect('https://github.com/wiktrek');
   }
-
   return next();
 });

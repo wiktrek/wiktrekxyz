@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 const path = String(Astro.url)
+    .replace("https://wiktrek.xyz", "")
+    .replace("http://localhost:3000", "")
 ---
 
-<Layout title="404">
+<Layout title="404 - wiktrek.xyz">
     <main class="justify-center text-center items-center text-5xl h-screen py-16">
     <p>404: Not found</p>
-    <p class="p-4">Path: {path.replace("https://wiktrek.xyz", "").replace("http://localhost:3000", "")}</p>    
+    <p class="p-4">Path: {path}</p>
     </main>
 </Layout>
