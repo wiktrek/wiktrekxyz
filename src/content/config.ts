@@ -1,4 +1,5 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { z } from 'zod';
 function new_date(date: string): Date {
   var date_components = date.split('.');
   var day = Number(date_components[0]);
@@ -8,11 +9,9 @@ function new_date(date: string): Date {
 }
 const blogSchema = z.object({
   title: z.string(),
-  author: z.string(),
   description: z.string(),
   postSlug: z.string(),
   featured: z.boolean().optional(),
-  tags: z.array(z.string()).default(['others']),
   pubDate: z
     .string()
     .or(z.date())
@@ -24,6 +23,7 @@ const blogSchema = z.object({
   img: z.string().optional(),
 });
 const blog = defineCollection({
+  type: 'content',
   schema: blogSchema,
 });
 
