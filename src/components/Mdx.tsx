@@ -27,9 +27,11 @@ export function Link(props: Props) {
 }
 export function GoBack() {
   return (
-    <a className="text-3xl" href="/">
-      <FontAwesomeIcon icon={faArrowLeft} />
-      {' return'}
-    </a>
+    <div className="text-3xl pt-2">
+      <a href="/">
+        <FontAwesomeIcon icon={faArrowLeft} />
+        {' return'}
+      </a>
+    </div>
   );
 }

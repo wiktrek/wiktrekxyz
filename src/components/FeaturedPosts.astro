@@ -10,7 +10,7 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
 ---
 
-<section id="blog" class="bg-transparent py-24 bg-[#161718] h-screen">
+<section id="blog" class="bg-transparent py-24 bg-[#161718] h-[80vh]">
     <a class=" text-5xl">Blog posts</a>
     <ul class="pt-4 grid gap-5">
         {featuredPosts.map(({ data }) => (
