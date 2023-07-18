@@ -12,10 +12,17 @@ function redirect() {
 }
 ---
 
-<div class="bg-transparent text-white w-64 h-72 m-auto rounded-3xl text-xl border-white border hover:scale-105 cursor-pointer transition-all p-4">
+<!-- <div class="bg-transparent text-white w-64 h-72 m-auto rounded-3xl text-xl border-white border hover:scale-105 cursor-pointer transition-all p-4">
 <a href={`/blog/${postSlug}`}>
   
     <p class="text-center text-lg font-semibold">{title}</p>
+    <p class="text-xl line-clamp-2 pt-2">{description}</p>
+    <p class="text-lg">{getDate(publishedAt)}</p>
+</a>
+</div> -->
+<div class="grid border border-[#EF2572] w-64 rounded-xl m-auto h-72">
+<a href={`/blog/${postSlug}`}>
+    <p class="text-center text-2xl font-semibold pt-4">{title}</p>
     <p class="text-xl line-clamp-2 pt-2">{description}</p>
     <p class="text-lg">{getDate(publishedAt)}</p>
 </a>

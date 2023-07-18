@@ -1,0 +1,23 @@
+---
+import Card from '../components/Card.astro';
+import { getCollection } from "astro:content";
+import sortPosts from "../utils/sortPosts";
+
+
+const posts = await getCollection("blog");
+const sortedPosts = sortPosts(posts);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+
+---
+
+<section id="blog" class="bg-transparent py-24 bg-[#161718] h-screen">
+    <a class=" text-5xl">Blog posts</a>
+    <ul class="pt-4 grid gap-5">
+        {featuredPosts.map(({ data }) => (
+            <Card
+            frontmatter={data} 
+            secHeading={false}
+            />
+        ))}
+    </ul>
+</section>
