@@ -1,23 +1,35 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
 interface Props {
   children: string;
   href: string;
 }
 export function Heading(props: Props) {
   return (
-    <div className="py-2">
-      <a className="text-5xl">{props.children}</a>
-      <hr className=" border-gray-400" />
+    <div className="py-4">
+      <a className="text-5xl font-semibold">{props.children}</a>
     </div>
   );
 }
 export function Link(props: Props) {
   return (
     <a
-      className="text-[#70f5c2] font-semibold"
+      className="text-[#0cabc0] font-semibold"
       href={props.href}
       target="_blank"
     >
       {props.children}
+    </a>
+  );
+}
+export function GoBack() {
+  return (
+    <a className="text-3xl" href="/">
+      <FontAwesomeIcon icon={faArrowLeft} />
+      {' return'}
     </a>
   );
 }

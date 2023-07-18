@@ -12,14 +12,12 @@ function redirect() {
 }
 ---
 
-<div class="bg-transparent text-white w-64 h-72 m-auto rounded-2xl text-xl border-white border hover:scale-105 cursor-pointer transition-all p-4">
+<div class="bg-transparent text-white w-64 h-72 m-auto rounded-3xl text-xl border-white border hover:scale-105 cursor-pointer transition-all p-4">
 <a href={`/blog/${postSlug}`}>
   
     <p class="text-center text-lg font-semibold">{title}</p>
+    <p class="text-xl line-clamp-2 pt-2">{description}</p>
     <p class="text-lg">{getDate(publishedAt)}</p>
-
-    <p  class="text-sm line-clamp-2 pt-2">{description}</p>
-  
 </a>
 </div>
     <!-- {
