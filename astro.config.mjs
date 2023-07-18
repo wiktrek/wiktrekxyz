@@ -11,12 +11,14 @@ export default defineConfig({
   site: 'https://wiktrek.xyz',
   output: 'hybrid',
   integrations: [
-    tailwind(),
     mdx(),
+    react(),
     sitemap({
       customPages: custom_pages,
     }),
-    react(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
   ],
   adapter: vercel(),
 });

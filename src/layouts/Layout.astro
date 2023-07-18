@@ -1,4 +1,6 @@
 ---
+
+import '../styles/global.css'
 export interface Props {
 	title: string;
 }
@@ -21,7 +23,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-[#161718] text-[#0cabc0]">
+	<body class="bg-[#161718] text-[#0cabc0] scrollbar-none">
 		<slot />
 	</body>
 </html>

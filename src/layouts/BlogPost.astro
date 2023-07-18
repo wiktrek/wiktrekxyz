@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import '../styles/global.css'
 import { getDate} from '../utils/date'
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -18,7 +19,7 @@ if (img !== undefined && img !== "" ) {
 	</head>
 
 
-	<body class="bg-[#161718] justify-center text-left items-center text-[#fbfdfe]">
+	<body class="bg-[#161718] justify-center text-left items-center text-[#fbfdfe] scrollbar-thin scrollbar-thumb-slate-800 scrollbar-track-slate-900">
 		<main>
 			<article class="mx-auto w-[50rem] h-screen text-2xl">
 				<slot />
