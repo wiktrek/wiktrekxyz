@@ -1,7 +1,4 @@
-<!--
-color palette
-https://coolors.co/0d0a0b-b7d3f2-6969b3-fa9f42
--->
+<!-- https://realtimecolors.com/?colors=fbfdfe-050505-0cabc0-031430-70f5c2 -->
 
 # [website](https://wiktrek.xyz)
 
