@@ -1,4 +1,4 @@
-<!-- https://realtimecolors.com/?colors=fbfdfe-050505-0cabc0-031430-70f5c2 -->
+<!-- https://realtimecolors.com/?colors=fbfdfe-161718-0cabc0-031430-70f5c2 -->
 
 # [website](https://wiktrek.xyz)
 
