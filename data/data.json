@@ -61,5 +61,16 @@
       "name": "repository",
       "redirect": "https://github.com/wiktrek/wiktrek.xyz"
     }
+  ],
+  "custom_pages": [
+    "https://project.wiktrek.xyz",
+    "https://rust.wiktrek.xyz",
+    "https://svelte.wiktrek.xyz",
+    "https://term.wiktrek.xyz/",
+    "https://project.wiktrek.xyz/projects/url",
+    "https://project.wiktrek.xyz/projects/poll",
+    "https://project.wiktrek.xyz/projects/poll",
+    "https://project.wiktrek.xyz/projects/pokemon",
+    "https://project.wiktrek.xyz/projects/rng"
   ]
 }
