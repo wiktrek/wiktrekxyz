@@ -1,0 +1,37 @@
+---
+title: 'How to create a discord bot'
+publishedAt: '30.08.2023'
+description: 'How to create a discord bot with eris and typescript'
+featured: true
+postSlug: 'discordbot'
+---
+
+import { Heading, Link, GoBack } from '../../components/Mdx';
+export const components = {
+  h1: Heading,
+  h2: Heading,
+  a: Link,
+};
+
+<GoBack />
+
+# How to create a discord bot with eris and typescript
+
+Go to [discord developer portal](https://discord.com/developers/applications)
+and click new application
+
+Then go to bot ![lighthouse](/images/discord/bot.png) and copy your bot's token
+and save it somewhere.
+
+Go to OAuth2 then go to url generator and select bot and application.commands.
+Select bot permissions![lighthouse](/images/discord/url.png)
+
+# Code
+
+If you want to use javascript/typescript you need to install
+[nodejs](https://nodejs.org/en) Install nodejs After yo installed nodejs you
+need to install typescript
+
+```bash
+npm install -D typescript
+```
