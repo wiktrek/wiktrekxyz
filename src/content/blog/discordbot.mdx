@@ -20,18 +20,57 @@ export const components = {
 Go to [discord developer portal](https://discord.com/developers/applications)
 and click new application
 
-Then go to bot ![lighthouse](/images/discord/bot.png) and copy your bot's token
-and save it somewhere.
+after you created a new application go to bot ![bot](/images/discord/bot.png)
+and copy your bot's token and save it somewhere. Selects intents
+![intents](/images/discord/intents.png)
 
 Go to OAuth2 then go to url generator and select bot and application.commands.
-Select bot permissions![lighthouse](/images/discord/url.png)
+Select bot permissions![lighthouse](/images/discord/url.png) And open the url
+that was generated select the server you want to add your bot to.
+![server](/images/discord/server.png)
 
 # Code
 
 If you want to use javascript/typescript you need to install
 [nodejs](https://nodejs.org/en) Install nodejs After yo installed nodejs you
-need to install typescript
+need to install typescript and [eris](https://abal.moe/Eris/)
 
 ```bash
 npm install -D typescript
+npm install -D ts-node
+npm install @types/node
+npm install eris
 ```
+
+after you have installed typescript and eris you can create index.ts file and
+import eris
+
+```typescript
+// index.ts
+import Eris from 'eris';
+const bot = new Eris.Client('BOT_TOKEN', {
+  intents: ['guildMessages'],
+});
+bot.on('ready', () => {
+  console.log('Ready!');
+});
+```
+
+bot.on('createmessage') is an event that is called every time a new message is
+sent. The bot checks if the message is equal to '!ping' if it is it send a
+message 'Pong!'
+
+```typescript
+bot.on('messageCreate', (msg) => {
+  if (msg.content === '!ping') {
+    bot.createMessage(msg.channel.id, 'Pong!');
+  }
+});
+bot.connect();
+```
+
+```bash
+ts-node index.ts
+```
+
+Send !ping to your server ![ping](/images/discord/ping.png)
