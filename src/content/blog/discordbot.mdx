@@ -18,22 +18,22 @@ export const components = {
 # How to create a discord bot with eris and typescript
 
 Go to [discord developer portal](https://discord.com/developers/applications)
-and click new application
+and click new application.
 
-after you created a new application go to bot ![bot](/images/discord/bot.png)
-and copy your bot's token and save it somewhere. Selects intents
+After you created a new application go to bot. ![bot](/images/discord/bot.png)
+Copy your bot's token and save it somewhere. Selects intents you want to use.
 ![intents](/images/discord/intents.png)
 
-Go to OAuth2 then go to url generator and select bot and application.commands.
-Select bot permissions![lighthouse](/images/discord/url.png) And open the url
-that was generated select the server you want to add your bot to.
+Go to OAuth2 then go to url generator, select bot and application.commands.
+Select bot permissions.![url](/images/discord/url.png)Open the url that was
+generated select the server you want to add your bot to.
 ![server](/images/discord/server.png)
 
 # Code
 
 If you want to use javascript/typescript you need to install
-[nodejs](https://nodejs.org/en) Install nodejs After yo installed nodejs you
-need to install typescript and [eris](https://abal.moe/Eris/)
+[nodejs](https://nodejs.org/en) Install nodejs. After you installed nodejs you
+need to install typescript and [eris](https://abal.moe/Eris/).
 
 ```bash
 npm install -D typescript
@@ -43,7 +43,7 @@ npm install eris
 ```
 
 after you have installed typescript and eris you can create index.ts file and
-import eris
+import eris.
 
 ```typescript
 // index.ts
@@ -58,7 +58,7 @@ bot.on('ready', () => {
 
 bot.on('createmessage') is an event that is called every time a new message is
 sent. The bot checks if the message is equal to '!ping' if it is it send a
-message 'Pong!'
+message 'Pong!'.
 
 ```typescript
 bot.on('messageCreate', (msg) => {
@@ -73,4 +73,4 @@ bot.connect();
 ts-node index.ts
 ```
 
-Send !ping to your server ![ping](/images/discord/ping.png)
+Send !ping to your server. ![ping](/images/discord/ping.png)
