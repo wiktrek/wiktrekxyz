@@ -12,7 +12,7 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
 <section id="blog" class="bg-transparent py-24 bg-[#161718] h-[80vh]">
     <h1 class=" text-5xl font-bold">Blog posts</h1>
-    <ul class="pt-4 grid gap-5">
+    <ul class="pt-4 grid gap-5 grid-cols-1">
         {featuredPosts.map(({ data }) => (
             <Card
             frontmatter={data} 
