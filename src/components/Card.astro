@@ -1,7 +1,7 @@
 ---
 import type { BlogSchema } from "../content/config";
 import { getDate} from '../utils/date'
-
+import {ViewTransitions} from 'astro:transitions';
 export interface Props {
   frontmatter: BlogSchema
   secHeading?: boolean;
@@ -19,4 +19,5 @@ function redirect() {
     <p class="text-xl line-clamp-2 pt-2">{description}</p>
     <p class="text-lg">{getDate(publishedAt)}</p>
 </a>
+<ViewTransitions />
 </div>
