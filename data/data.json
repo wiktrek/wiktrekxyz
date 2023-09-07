@@ -67,10 +67,13 @@
     "https://rust.wiktrek.xyz",
     "https://svelte.wiktrek.xyz",
     "https://term.wiktrek.xyz/",
+    "https://three.wiktrek.xyz",
     "https://project.wiktrek.xyz/projects/url",
     "https://project.wiktrek.xyz/projects/poll",
     "https://project.wiktrek.xyz/projects/poll",
     "https://project.wiktrek.xyz/projects/pokemon",
-    "https://project.wiktrek.xyz/projects/rng"
+    "https://project.wiktrek.xyz/projects/rng",
+    "https://svelte.wiktrek.xyz/todo",
+    "https://svelte.wiktrek.xyz/name"
   ]
 }
