@@ -10,14 +10,14 @@ interface Props {
 export function Heading(props: Props) {
   return (
     <div className="py-4">
-      <a className="text-5xl font-semibold">{props.children}</a>
+      <a className="text-5xl font-semibold text-[#767dc1] ">{props.children}</a>
     </div>
   );
 }
 export function Link(props: Props) {
   return (
     <a
-      className="text-[#0cabc0] font-semibold"
+      className="text-[#1e0245] font-semibold"
       href={props.href}
       target="_blank"
     >
@@ -27,7 +27,7 @@ export function Link(props: Props) {
 }
 export function GoBack() {
   return (
-    <div className="text-3xl pt-2">
+    <div className="text-3xl pt-2 text-[#767dc1]">
       <a href="/">
         <FontAwesomeIcon icon={faArrowLeft} />
         {' return'}
