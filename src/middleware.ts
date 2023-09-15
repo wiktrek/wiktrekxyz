@@ -3,7 +3,7 @@ import { links } from '../data/data.json';
 export const onRequest = defineMiddleware(async (context, next) => {
   const path = context.url.pathname;
   if (path.startsWith('/go')) {
-    let a = `https://project.wiktrek.xyz/api${path}`;
+    let a = `https://project.wiktrek.xyz${path}`;
     return context.redirect(a);
   }
   if (path.startsWith('/q')) {

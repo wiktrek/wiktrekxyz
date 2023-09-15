@@ -20,5 +20,7 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
-  adapter: vercel(),
+  adapter: vercel({
+    includeFiles: ['./data/data.json'],
+  }),
 });
