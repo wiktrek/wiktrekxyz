@@ -17,7 +17,7 @@ export function Heading(props: Props) {
 export function Link(props: Props) {
   return (
     <a
-      className="text-[#1e0245] font-semibold"
+      className="text-[#ef2572] font-semibold"
       href={props.href}
       target="_blank"
     >

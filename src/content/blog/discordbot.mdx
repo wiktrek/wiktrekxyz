@@ -5,6 +5,7 @@ description: 'How to create a discord bot with eris and typescript'
 featured: true
 postSlug: 'discordbot'
 ---
+
 import { Heading, Link, GoBack } from '../../components/Mdx';
 export const components = {
   h1: Heading,
@@ -30,9 +31,10 @@ generated select the server you want to add your bot to.
 
 # Code
 
-If you want to use javascript/typescript you need to install
-[nodejs](https://nodejs.org/en) Install nodejs. After you installed nodejs you
-need to install typescript and [eris](https://abal.moe/Eris/).
+If you want to use typescript you need to install
+[nodejs](https://nodejs.org/en). After you installed nodejs you need to install
+[typescript](https://www.typescriptlang.org/) and
+[eris](https://abal.moe/Eris/).
 
 ```bash
 npm install -D typescript
@@ -67,6 +69,8 @@ bot.on('messageCreate', (msg) => {
 });
 bot.connect();
 ```
+
+run index.ts using ts-node
 
 ```bash
 ts-node index.ts
