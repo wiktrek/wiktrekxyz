@@ -1,24 +1,22 @@
 ---
-import Card from '../components/Card.astro';
+import Card from "../components/Card.astro";
 import { getCollection } from "astro:content";
 import sortPosts from "../utils/sortPosts";
-import {ViewTransitions} from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 
 const posts = await getCollection("blog");
 const sortedPosts = sortPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-
 ---
 
 <section id="blog" class="bg-transparent py-24 bg-[#05080a] h-[80vh]">
-    <ViewTransitions />
-    <h1 class=" text-5xl font-bold">Blog posts</h1>
-    <ul class="pt-4 grid gap-5 grid-cols-1">
-        {featuredPosts.map(({ data }) => (
-            <Card
-            frontmatter={data} 
-            secHeading={false}
-            />
-        ))}
-    </ul>
+  <ViewTransitions />
+  <h1 class="text-5xl font-bold">Blog posts</h1>
+  <ul class="pt-4 grid gap-5 grid-cols-1">
+    {
+      featuredPosts.map(({ data }) => (
+        <Card frontmatter={data} secHeading={false} />
+      ))
+    }
+  </ul>
 </section>

@@ -1,32 +1,33 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import type { CollectionEntry } from 'astro:content';
-import '../styles/global.css'
-import { getDate} from '../utils/date'
-type Props = CollectionEntry<'blog'>['data'];
+import { ViewTransitions } from "astro:transitions";
+import type { CollectionEntry } from "astro:content";
+import "../styles/global.css";
+import { getDate } from "../utils/date";
+type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, publishedAt, img } = Astro.props;
 let image_exists = false;
-if (img !== undefined && img !== "" ) {
-	image_exists = true 
+if (img !== undefined && img !== "") {
+  image_exists = true;
 }
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-	<meta charset="UTF-8" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<title>{title} - wiktrek.xyz</title>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} - wiktrek.xyz</title>
+  </head>
 
-
-	<body class="bg-[#05080a] justify-center text-left items-center text-[#fbfdfe] scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-gray-700">
-		<main>
-			<article class="mx-auto w-[50rem] h-screen text-2xl ">
-				<slot class=""/>
-			</article>
-		</main>
-	</body>
-	<ViewTransitions />
+  <body
+    class="bg-[#05080a] justify-center text-left items-center text-[#fbfdfe] scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-gray-700"
+  >
+    <main>
+      <article class="mx-auto w-[50rem] h-screen text-2xl">
+        <slot class="" />
+      </article>
+    </main>
+  </body>
+  <ViewTransitions />
 </html>

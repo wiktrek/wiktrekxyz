@@ -1,23 +1,26 @@
 ---
 import type { BlogSchema } from "../content/config";
-import { getDate} from '../utils/date'
-import {ViewTransitions} from 'astro:transitions';
+import { getDate } from "../utils/date";
+import { ViewTransitions } from "astro:transitions";
 export interface Props {
-  frontmatter: BlogSchema
+  frontmatter: BlogSchema;
   secHeading?: boolean;
 }
-const { description, postSlug, publishedAt, title } = Astro.props.frontmatter
+const { description, postSlug, publishedAt, title } = Astro.props.frontmatter;
 function redirect() {
   Astro.redirect(`/blog/#{postSlug}`);
 }
 ---
 
-
-<div class="grid border border-[#f02372] w-64 rounded-xl m-auto h-72 text-[#fbfdfe]">
-<a href={`/blog/${postSlug}`}>
-    <p class="text-center text-2xl font-semibold pt-4 text-[#767dc1]">{title}</p>
+<div
+  class="grid border border-[#f02372] w-64 rounded-xl m-auto h-72 text-[#fbfdfe]"
+>
+  <a href={`/blog/${postSlug}`}>
+    <p class="text-center text-2xl font-semibold pt-4 text-[#767dc1]">
+      {title}
+    </p>
     <p class="text-xl line-clamp-2 pt-2">{description}</p>
-  <p class="text-lg">{getDate(publishedAt)}</p>
-</a>
-<ViewTransitions />
+    <p class="text-lg">{getDate(publishedAt)}</p>
+  </a>
+  <ViewTransitions />
 </div>
