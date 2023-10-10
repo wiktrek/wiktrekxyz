@@ -1,12 +1,12 @@
 ---
-title: 'How to create a discord bot'
-publishedAt: '30.08.2023'
-description: 'How to create a discord bot with eris and typescript'
+title: "How to create a discord bot"
+publishedAt: "30.08.2023"
+description: "How to create a discord bot with eris and typescript"
 featured: true
-postSlug: 'discordbot'
+postSlug: "discordbot"
 ---
 
-import { Heading, Link, GoBack } from '../../components/Mdx';
+import { Heading, Link, GoBack } from "../../components/Mdx";
 export const components = {
   h1: Heading,
   h2: Heading,
@@ -48,12 +48,12 @@ import eris.
 
 ```typescript
 // index.ts
-import Eris from 'eris';
-const bot = new Eris.Client('BOT_TOKEN', {
-  intents: ['guildMessages'],
+import Eris from "eris";
+const bot = new Eris.Client("BOT_TOKEN", {
+  intents: ["guildMessages"],
 });
-bot.on('ready', () => {
-  console.log('Ready!');
+bot.on("ready", () => {
+  console.log("Ready!");
 });
 ```
 
@@ -62,9 +62,9 @@ sent. The bot checks if the message is equal to '!ping' if it is it send a
 message 'Pong!'.
 
 ```typescript
-bot.on('messageCreate', (msg) => {
-  if (msg.content === '!ping') {
-    bot.createMessage(msg.channel.id, 'Pong!');
+bot.on("messageCreate", (msg) => {
+  if (msg.content === "!ping") {
+    bot.createMessage(msg.channel.id, "Pong!");
   }
 });
 bot.connect();
