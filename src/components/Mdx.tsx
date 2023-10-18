@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import { config } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 interface Props {
   children: string;
@@ -10,7 +10,7 @@ interface Props {
 export function Heading(props: Props) {
   return (
     <div className="py-4">
-      <a className="text-5xl font-semibold text-[#767dc1] ">{props.children}</a>
+      <a className="text-5xl font-semibold text-[#6bc2a1] ">{props.children}</a>
     </div>
   );
 }
@@ -27,10 +27,10 @@ export function Link(props: Props) {
 }
 export function GoBack() {
   return (
-    <div className="text-3xl pt-2 text-[#767dc1]">
+    <div className="text-3xl pt-2 text-[#6bc2a1]">
       <a href="/">
         <FontAwesomeIcon icon={faArrowLeft} />
-        {' return'}
+        {" return"}
       </a>
     </div>
   );
