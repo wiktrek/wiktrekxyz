@@ -4,7 +4,6 @@ import type { CollectionEntry } from "astro:content";
 import "../styles/global.css";
 import { getDate } from "../utils/date";
 type Props = CollectionEntry<"blog">["data"];
-
 const { title, description, publishedAt, img } = Astro.props;
 let image_exists = false;
 if (img !== undefined && img !== "") {
@@ -21,7 +20,7 @@ if (img !== undefined && img !== "") {
   </head>
 
   <body
-    class="bg-[#05080a] justify-center text-left items-center text-[#fbfdfe] scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-gray-700"
+    class="bg-[#05080a] justify-center text-left items-center text-[#fbfdfe] scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-gray-700 font-semi"
   >
     <main>
       <article class="mx-auto w-[50rem] h-screen text-2xl">

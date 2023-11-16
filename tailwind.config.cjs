@@ -72,11 +72,12 @@ module.exports = {
       },
     },
     fontFamily: {
-      heading: "Poppins",
-      body: "Poppins",
+      sans: ["var(--font-geist-sans)"],
+      mono: ["var(--font-geist-mono)"],
     },
     fontWeight: {
       normal: "400",
+      semi: "500",
       bold: "700",
     },
   },
