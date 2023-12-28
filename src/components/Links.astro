@@ -10,6 +10,7 @@ import {
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { Button } from "~/components/ui/button";
 config.autoAddCss = false;
 ---
 
@@ -46,12 +47,18 @@ config.autoAddCss = false;
     </a>
   </li>
   <li>
-    <a href="/#projects"> Projects</a>
+    <a href="/#projects">
+      <Button variant="outline" size="lg">Projects</Button>
+    </a>
   </li>
   <li>
-    <a href="/#about">About</a>
+    <a href="/about">
+      <Button variant="outline" size="lg">About</Button>
+    </a>
   </li>
   <li>
-    <a href="/blog">Blog</a>
+    <a href="/blog">
+      <Button variant="outline" size="lg">Blog</Button>
+    </a>
   </li>
 </section>

@@ -1,0 +1,14 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import Layout from "~/layouts/Layout.astro";
+import { GoBack } from "~/components/Mdx";
+---
+
+<Layout title="About me - wiktrek.xyz">
+  <div class="text-center justify-center items-center">
+    <GoBack />
+    <a>About me</a>
+  </div>
+
+  <ViewTransitions />
+</Layout>
