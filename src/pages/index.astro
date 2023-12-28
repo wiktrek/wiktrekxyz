@@ -1,13 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import FeaturedPosts from "../components/FeaturedPosts.astro";
-import Link from "../components/Links.astro";
-import AboutMe from "../components/AboutMe.astro";
+import Layout from "~/layouts/Layout.astro";
+import Link from "~/components/Links.astro";
+import AboutMe from "~/components/AboutMe.astro";
 import { ViewTransitions } from "astro:transitions";
 ---
 
 <Layout title="wiktrek.xyz">
-  <main class="justify-center text-center items-center font-mono text-2xl pt-4">
+  <main
+    class="justify-center text-center items-center font-mono text-2xl pt-4 text-ring"
+  >
     <Link />
     <AboutMe />
   </main>
