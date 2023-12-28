@@ -68,5 +68,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwind-scrollbar", "tailwindcss-animate")],
+  plugins: [require("tailwind-scrollbar"), require("tailwindcss-animate")],
 };

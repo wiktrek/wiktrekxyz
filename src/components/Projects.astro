@@ -1,0 +1,57 @@
+---
+import Project, { type Props as Data } from "~/components/Projects.tsx";
+const data: Data[] = [
+  {
+    description: "My website with other cool projects",
+    span: "project.wiktrek.xyz",
+    second_title: "project.wiktrek.xyz",
+    title: "project",
+    link: "https://project.wiktrek.xyz/",
+  },
+  {
+    description: "Simple discord bot",
+    span: "My first programming project",
+    second_title: "My discord bot",
+    title: "wiktrekbot",
+    link: "https://github.com/wiktrek/wiktrekbot",
+  },
+  {
+    description: "Cool website made with react three fiber",
+    span: "three.wiktrek.xyz",
+    second_title: "three.wiktrek.xyz",
+    title: "three",
+    link: "https://three.wiktrek.xyz/",
+  },
+
+  {
+    description: "Create polls",
+    span: "poll app",
+    second_title: "project.wiktrek.xyz",
+    title: "poll app",
+    link: "https://project.wiktrek.xyz/projects/poll",
+  },
+  {
+    description: "Create short links",
+    span: "poll app",
+    second_title: "Link shortener",
+    title: "link shortener",
+    link: "https://project.wiktrek.xyz/projects/url",
+  },
+];
+---
+
+<section id="projects" class="h-[80vh] text-4xl">
+  <p class="text-5xl">Projects</p>
+  {
+    data.map((props) => (
+      <Project
+        description={props.description}
+        span={props.span}
+        second_title={props.second_title}
+        title={props.title}
+        link={props.link}
+        client:idle
+      />
+    ))
+  }
+</section>
