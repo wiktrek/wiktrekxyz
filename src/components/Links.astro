@@ -14,51 +14,70 @@ import { Button } from "~/components/ui/button";
 config.autoAddCss = false;
 ---
 
-<section id="links" class="text-7xl list-none h-screen font-bold">
+<section id="links" class="text-xl list-none h-screen font-bold">
   <li>
-    <a href="https://github.com/wiktrek" target="__blank">
+    <a
+      href="https://github.com/wiktrek"
+      target="__blank"
+      class="hover:text-secondary"
+    >
       <FontAwesomeIcon icon={faGithub} />
     </a>
-  </li>
-  <li>
-    <a href="https://discord.com/users/499665258038820866" target="__blank">
+
+    <a
+      href="https://discord.com/users/499665258038820866"
+      target="__blank"
+      class="hover:text-secondary"
+    >
       <FontAwesomeIcon icon={faDiscord} />
     </a>
-  </li>
-
-  <li>
-    <a href="https://www.twitch.tv/wiktrekxyz" target="__blank">
+    <a
+      href="https://www.twitch.tv/wiktrekxyz"
+      target="__blank"
+      class="hover:text-secondary"
+    >
       <FontAwesomeIcon icon={faTwitch} />
     </a>
-  </li>
-  <li>
-    <a href="https://www.instagram.com/wiktrekxyz" target="__blank">
+
+    <a
+      href="https://www.instagram.com/wiktrekxyz"
+      target="__blank"
+      class="hover:text-secondary"
+    >
       <FontAwesomeIcon icon={faInstagram} />
     </a>
-  </li>
-  <li>
-    <a href="https://www.youtube.com/@wiktrek" target="__blank">
+
+    <a
+      href="https://www.youtube.com/@wiktrek"
+      target="__blank"
+      class="hover:text-secondary"
+    >
       <FontAwesomeIcon icon={faYoutube} />
     </a>
-  </li>
-  <li>
-    <a href="https://github.com/wiktrek/wiktrekxyz" target="__blank">
+
+    <a
+      href="https://github.com/wiktrek/wiktrekxyz"
+      target="__blank"
+      class="hover:text-secondary"
+    >
       <FontAwesomeIcon icon={faCode} />
     </a>
   </li>
-  <li>
-    <a href="/#projects">
-      <Button variant="outline" size="lg">Projects</Button>
-    </a>
-  </li>
-  <li>
-    <a href="/about">
-      <Button variant="outline" size="lg">About</Button>
-    </a>
-  </li>
-  <li>
-    <a href="/blog">
-      <Button variant="outline" size="lg">Blog</Button>
-    </a>
-  </li>
+  <ul>
+    <li class="pt-4">
+      <a href="/#projects">
+        <Button variant="outline" size="lg">Projects</Button>
+      </a>
+    </li>
+    <li class="pt-1">
+      <a href="/about">
+        <Button variant="outline" size="lg">About</Button>
+      </a>
+    </li>
+    <li class="pt-1">
+      <a href="/blog">
+        <Button variant="outline" size="lg">Blog</Button>
+      </a>
+    </li>
+  </ul>
 </section>
