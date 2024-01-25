@@ -1,16 +1,13 @@
 ---
 import Skill from "~/components/Skill";
+const skills = ["react", "nextjs", "rust", "typescript"];
 ---
 
-<!-- <div class="h-96">
+<div class="h-96">
   <p class="text-5xl">Skills</p>
-  <div class="flex justify-center gap-1">
-    <Skill text="react" icon="react" client:idle />
-    <Skill text="rust" icon="rust" client:idle />
-    <Skill text="git" icon="git" client:idle />
-    <Skill text="html" icon="html" client:idle />
-    <Skill text="node" icon="node" client:idle />
+  <div class="flex justify-center gap-2">
+    {skills.map((s) => <Skill text={s} icon={s} client:idle />)}
   </div>
 </div>
--->
-<div><div></div></div>
+
+<!-- <div><div></div></div> -->

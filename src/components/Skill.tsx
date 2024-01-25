@@ -20,16 +20,18 @@ import {
 import { Button } from "~/components/ui/button";
 export default function Card(props: Props) {
   return (
-    <div className="">
+    <div className="flex justify-between ">
       <HoverCard>
-        <HoverCardTrigger asChild>
-          <FontAwesomeIcon
-            icon={getIcon(props.icon)}
-            className="text-5xl text-white"
+        <HoverCardTrigger asChild className="bg-primary-foreground rounded-xl">
+          <img
+            src={`/icons/${props.icon}.svg`}
+            width={80}
+            height={80}
+            className="p-4"
           />
         </HoverCardTrigger>
-        <HoverCardContent className="w-16">
-          <div className="flex justify-between space-x-4">
+        <HoverCardContent className="w-18">
+          <div className="">
             <div className="space-y-1 text-center">
               <h4 className="text-sm font-semibold">{props.text}</h4>
             </div>
