@@ -1,7 +1,8 @@
 ---
+type Category = "frontend" | "backend" | "other";
 interface Skill {
   name: string;
-  category: "frontend" | "backend";
+  category: Category;
 }
 import Skill from "~/components/Skill";
 const skills: Skill[] = [
@@ -33,13 +34,43 @@ const skills: Skill[] = [
     name: "node",
     category: "backend",
   },
+  {
+    name: "git",
+    category: "other",
+  },
 ];
 ---
+
+<script>
+  const buttons = document.querySelectorAll("button.button-class");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      buttons.forEach((b) => {
+        b.classList.remove("text-primary");
+      });
+      button.classList.add("text-primary");
+    });
+  });
+</script>
 
 <div class="h-96">
   <section id="skills">
     <p class="text-5xl">Skills</p>
-    <div class="flex justify-center gap-2">
+    <div>
+      <button
+        class="p-4 bg-primary-foreground rounded-xl button-class"
+        id="button-frontend">frontend</button
+      >
+      <button
+        class="p-4 bg-primary-foreground rounded-xl button-class"
+        id="button-backend">backend</button
+      >
+      <button
+        class="p-4 bg-primary-foreground rounded-xl button-class"
+        id="button-other">other</button
+      >
+    </div>
+    <div class="flex justify-center gap-2 pt-6">
       {
         skills.map((s) => (
           <Skill
