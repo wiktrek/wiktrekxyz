@@ -1,22 +1,57 @@
 ---
+interface Skill {
+  name: string;
+  category: "frontend" | "backend";
+}
 import Skill from "~/components/Skill";
-const skills = [
-  "react",
-  "nextjs",
-  "rust",
-  "typescript",
-  "svelte",
-  "git",
-  "node",
-  "tailwind",
+const skills: Skill[] = [
+  {
+    name: "react",
+    category: "frontend",
+  },
+  {
+    name: "nextjs",
+    category: "frontend",
+  },
+  {
+    name: "rust",
+    category: "backend",
+  },
+  {
+    name: "typescript",
+    category: "frontend",
+  },
+  {
+    name: "svelte",
+    category: "frontend",
+  },
+  {
+    name: "tailwind",
+    category: "frontend",
+  },
+  {
+    name: "node",
+    category: "backend",
+  },
 ];
 ---
 
 <div class="h-96">
-  <p class="text-5xl">Skills</p>
-  <div class="flex justify-center gap-2">
-    {skills.map((s) => <Skill text={s} icon={s} client:idle />)}
-  </div>
+  <section id="skills">
+    <p class="text-5xl">Skills</p>
+    <div class="flex justify-center gap-2">
+      {
+        skills.map((s) => (
+          <Skill
+            category={s.category}
+            text={s.name}
+            icon={s.name}
+            client:idle
+          />
+        ))
+      }
+    </div>
+  </section>
 </div>
 
 <!-- <div><div></div></div> -->
