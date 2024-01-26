@@ -13,7 +13,7 @@ import { Button } from "~/components/ui/button";
 export default function Card(props: Props) {
   const { category, icon, text } = props;
   return (
-    <div className="flex justify-between " id={category}>
+    <div className="flex justify-between skill " id={category}>
       <HoverCard>
         <HoverCardTrigger
           asChild
