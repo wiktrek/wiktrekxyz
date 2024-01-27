@@ -23,7 +23,7 @@ export default function Card(props: Props) {
             src={`/icons/${icon}.svg`}
             width={80}
             height={80}
-            className="p-4"
+            className="p-4 w-16 md:w-20"
           />
         </HoverCardTrigger>
         <HoverCardContent className="w-18">

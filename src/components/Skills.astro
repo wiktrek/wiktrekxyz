@@ -118,17 +118,19 @@ const skills: Skill[] = [
         id="button-other">other</button
       >
     </div>
-    <div class="flex justify-center gap-2 pt-6">
-      {
-        skills.map((s) => (
-          <Skill
-            category={s.category}
-            text={s.name}
-            icon={s.name}
-            client:idle
-          />
-        ))
-      }
+    <div class="flex justify-center">
+      <div class="grid justify-center gap-2 pt-6 grid-cols-4 md:grid-cols-9">
+        {
+          skills.map((s) => (
+            <Skill
+              category={s.category}
+              text={s.name}
+              icon={s.name}
+              client:idle
+            />
+          ))
+        }
+      </div>
     </div>
   </section>
 </div>
