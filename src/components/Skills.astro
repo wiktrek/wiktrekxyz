@@ -121,14 +121,24 @@ const skills: Skill[] = [
     <div class="flex justify-center">
       <div class="grid justify-center gap-2 pt-6 grid-cols-4 md:grid-cols-9">
         {
-          skills.map((s) => (
-            <Skill
-              category={s.category}
-              text={s.name}
-              icon={s.name}
-              client:idle
-            />
-          ))
+          skills
+            .sort((a, b) => {
+              if (a.category < b.category) {
+                return -1;
+              }
+              if (a.category > b.category) {
+                return 1;
+              }
+              return 0;
+            })
+            .map((s) => (
+              <Skill
+                category={s.category}
+                text={s.name}
+                icon={s.name}
+                client:idle
+              />
+            ))
         }
       </div>
     </div>
