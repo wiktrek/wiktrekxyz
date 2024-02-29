@@ -66,17 +66,21 @@
     "https://rust.wiktrek.xyz",
     "https://three.wiktrek.xyz",
     "https://project.wiktrek.xyz",
+    "https://info.wiktrek.xyz",
     "https://project.wiktrek.xyz/projects/url",
+    "https://project.wiktrek.xyz/sign-in",
     "https://project.wiktrek.xyz/projects/poll",
     "https://project.wiktrek.xyz/projects/poll",
     "https://project.wiktrek.xyz/projects/pokemon",
     "https://project.wiktrek.xyz/projects/rng",
+    "https://project.wiktrek.xyz/projects/rps",
     "https://project.wiktrek.xyz/projects/term",
     "https://svelte.wiktrek.xyz",
     "https://svelte.wiktrek.xyz/todo",
     "https://svelte.wiktrek.xyz/name",
     "https://info.wiktrek.xyz/apis/affirmation",
     "https://info.wiktrek.xyz/apis/dadjoke",
-    "https://info.wiktrek.xyz/stuff/rating"
+    "https://info.wiktrek.xyz/stuff/rating",
+    "https://info.wiktrek.xyz/stuff"
   ]
 }
