@@ -3,52 +3,64 @@ type Category = "frontend" | "backend" | "other";
 interface Skill {
   name: string;
   category: Category;
+  image: string;
 }
 import Skill from "~/components/Skill";
 const skills: Skill[] = [
   {
     name: "react",
     category: "frontend",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
   },
   {
     name: "nextjs",
     category: "frontend",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-plain.svg"
   },
   {
     name: "rust",
     category: "backend",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
   },
   {
     name: "typescript",
     category: "frontend",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
   },
   {
     name: "svelte",
     category: "frontend",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg"
   },
   {
     name: "tailwind",
     category: "frontend",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
   },
   {
     name: "node",
     category: "backend",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg"
   },
   {
     name: "git",
     category: "other",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
   },
   {
     name: "astro",
     category: "frontend",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg"
   },
   {
     name: "vercel",
     category: "other",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg"
   },
   {
     name: "vitejs",
     category: "frontend",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"
   },
 ];
 ---
@@ -135,7 +147,7 @@ const skills: Skill[] = [
               <Skill
                 category={s.category}
                 text={s.name}
-                icon={s.name}
+                icon={s.image}
                 client:idle
               />
             ))

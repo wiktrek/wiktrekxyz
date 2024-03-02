@@ -35,10 +35,10 @@ export default function Card(props: Props) {
         >
           <div>
             <img
-              src={`/icons/${icon}.svg`}
+              src={`${icon}`}
               width={80}
               height={80}
-              className="p-4 w-16 md:w-20 mx-auto"
+              className="p-4 w-20 md:w-24 mx-auto"
             />
 
             {isMobile ? (
