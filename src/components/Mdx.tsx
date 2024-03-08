@@ -7,26 +7,26 @@ interface Props {
   children: string;
   href: string;
 }
-export function Heading(props: Props) {
-  return (
-    <div className="py-4">
-      <a className="text-5xl font-semibold text-primary-500 ">
-        {props.children}
-      </a>
-    </div>
-  );
-}
-export function Link(props: Props) {
-  return (
-    <a
-      className="text-[#ef2572] font-semibold"
-      href={props.href}
-      target="_blank"
-    >
-      {props.children}
-    </a>
-  );
-}
+// export function Heading(props: Props) {
+//   return (
+//     <div className="py-4">
+//       <a className="text-5xl font-semibold text-primary-500 ">
+//         {props.children}
+//       </a>
+//     </div>
+//   );
+// }
+// export function Link(props: Props) {
+//   return (
+//     <a
+//       className="text-[#ef2572] font-semibold"
+//       href={props.href}
+//       target="_blank"
+//     >
+//       {props.children}
+//     </a>
+//   );
+// }
 export function GoBack() {
   return (
     <div className="text-2xl pt-2 text-primary-500">

@@ -19,11 +19,9 @@ if (img !== undefined && img !== "") {
     <title>{title} - wiktrek.xyz</title>
   </head>
 
-  <body
-    class="bg-[#05080a] justify-center text-left items-center text-[#fbfdfe] scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-gray-700 font-semi"
-  >
-    <main>
-      <article class="mx-auto w-[50rem] h-screen text-2xl">
+  <body>
+    <main class="bg-background">
+      <article class="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl prose-invert mx-auto">
         <slot class="" />
       </article>
     </main>
