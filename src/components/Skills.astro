@@ -83,7 +83,8 @@ const skills: Skill[] = [
       const category = button.id.split("-")[1];
       reset();
       button.classList.add("text-primary");
-      button.classList.add("bg-accent");
+      button.classList.add("underline");
+
       if (category == "all") {
         show_all();
       } else {
@@ -95,8 +96,7 @@ const skills: Skill[] = [
   function reset() {
     buttons.forEach((b) => {
       b.classList.remove("text-primary");
-      b.classList.remove("bg-accent");
-      b.classList.add("bg-primary-foreground");
+      b.classList.remove("underline");
     });
   }
   function show_category(category: string) {
@@ -119,24 +119,24 @@ const skills: Skill[] = [
 <div class="h-96">
   <section id="skills">
     <p class="text-5xl">Skills</p>
-    <div>
+    <div class="font-medium">
       <button
-        class="p-4 bg-accent text-primary rounded-xl button-class hover:bg-accent hover:text-primary"
+        class="text-2xl underline button-class"
         id="button-all"
       >
         all</button
       >
 
       <button
-        class="p-4 bg-primary-foreground rounded-xl button-class hover:bg-accent hover:text-primary"
+        class="text-2xl button-class"
         id="button-frontend">frontend</button
       >
       <button
-        class="p-4 bg-primary-foreground rounded-xl button-class hover:bg-accent hover:text-primary"
+        class="text-2xl button-class"
         id="button-backend">backend</button
       >
       <button
-        class="p-4 bg-primary-foreground rounded-xl button-class hover:bg-accent hover:text-primary"
+        class="text-2xl button-class"
         id="button-other">other</button
       >
     </div>

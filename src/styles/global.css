@@ -35,7 +35,8 @@
     @apply bg-background text-foreground;
   }
 }
-@layer components {
+
+ @layer utilities {
       /* Hide scrollbar for Chrome, Safari and Opera */
       .no-scrollbar::-webkit-scrollbar {
           display: none;
