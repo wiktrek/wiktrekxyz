@@ -31,7 +31,7 @@ export default function Card(props: Props) {
       <HoverCard>
         <HoverCardTrigger
           asChild
-          className="bg-primary-foreground rounded-xl hover:bg-accent animate-out transition-all"
+          className="bg-popover rounded-md hover:bg-accent  animate-out transition-all"
         >
           <div>
             <img
