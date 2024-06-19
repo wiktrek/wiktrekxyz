@@ -15,13 +15,6 @@ const data: Data[] = [
     title: "wiktrekbot",
     link: "https://github.com/wiktrek/wiktrekbot",
   },
-  // {
-  //   description: "Cool website made with react three fiber",
-  //   span: "three.wiktrek.xyz",
-  //   second_title: "three.wiktrek.xyz",
-  //   title: "three",
-  //   link: "https://three.wiktrek.xyz/",
-  // },
   {
     description: "Create polls",
     span: "poll app",
@@ -37,7 +30,7 @@ const data: Data[] = [
     link: "https://project.wiktrek.xyz/projects/url",
   },
   {
-    description: "",
+    description: "Repository with many projects made in rust",
     span: "made in rust btw",
     second_title: "Small rust projects",
     title: "rust",
@@ -53,8 +46,9 @@ const data: Data[] = [
 ];
 ---
 
-<section id="projects" class="h-[100vh] text-4xl">
-  <p class="text-5xl">Projects</p>
+<section id="projects" class="flex h-[100vh] text-4xl justify-center text-center items-center flex-col  ">
+  <p class="text-5xl ">Projects</p>
+  <div class="grid mx-auto grid-cols-3 gap-9">
   {
     data.map((props) => (
       <Project
@@ -67,4 +61,5 @@ const data: Data[] = [
       />
     ))
   }
+  </div>
 </section>
