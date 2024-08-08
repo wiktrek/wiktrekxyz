@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className="flex top-0 pt-0 sticky justify-between items-center text-md md:text-2xl">
         <div className="pl-2 md:pl-8">
           <HoverCard>
-            <HoverCardTrigger className="text-primary">
+            <HoverCardTrigger className="text-primary hover:text-secondary cursor-pointer">
               wiktrek
             </HoverCardTrigger>
             <HoverCardContent>
@@ -33,11 +33,21 @@ export default function Navbar() {
           </HoverCard>
         </div>
         <div className="space-x-2 md:space-x-8 text-xl md:text-2xl">
-          <a href="/">Home</a>
-          <a href="/#projects">Projects</a>
-          <a href="/skills">Skills</a>
+          <a href="/" className="hover:text-secondary">
+            Home
+          </a>
+          <a href="/#projects" className="hover:text-secondary">
+            Projects
+          </a>
+          <a href="/skills" className="hover:text-secondary">
+            Skills
+          </a>
         </div>
-        <a className="pr-2" href="https://x.com/wiktrek" target="_blank">
+        <a
+          className="pr-2 hover:text-secondary"
+          href="https://x.com/wiktrek"
+          target="_blank"
+        >
           Contact me
         </a>
       </div>

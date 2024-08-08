@@ -10,7 +10,7 @@ import { Button } from "~/components/ui/button";
 export default function Card(props: Props) {
   return (
     <div
-      className="w-72 h-44 bg-popover rounded-md text-xl shadow-md text-foreground text-left p-2 hover:cursor-pointer"
+      className="w-72 h-44 bg-transparent rounded-md text-xl shadow-md text-foreground text-left p-2 hover:cursor-pointer"
       onClick={() => window.open(props.link)}
     >
       <a className="text-3xl text-primary">{props.title}</a>

@@ -5,6 +5,7 @@ export interface Props {
 }
 const { title } = Astro.props;
 import NavBar from "~/components/NavBar.tsx";
+import { Toaster } from "~/components/ui/toaster";
 import { ViewTransitions } from "astro:transitions";
 ---
 
@@ -32,6 +33,7 @@ import { ViewTransitions } from "astro:transitions";
   <body class="font-bold bg-background no-scrollbar scroll-smooth">
     <NavBar client:only />
     <slot />
+    <Toaster client:idle />
   </body>
   <ViewTransitions />
 </html>
