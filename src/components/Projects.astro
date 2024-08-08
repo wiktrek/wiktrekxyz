@@ -20,14 +20,14 @@ const data: Data[] = [
     span: "poll app",
     second_title: "project.wiktrek.xyz",
     title: "poll app",
-    link: "https://project.wiktrek.xyz/projects/poll",
+    link: "https://project.wiktrek.xyz/poll",
   },
   {
     description: "Create short links",
     span: "Cool project",
     second_title: "Link shortener",
     title: "link shortener",
-    link: "https://project.wiktrek.xyz/projects/url",
+    link: "https://project.wiktrek.xyz/url",
   },
   {
     description: "Repository with many projects made in rust",
@@ -51,7 +51,7 @@ const data: Data[] = [
   class="flex h-[100vh] text-4xl justify-center text-center items-center flex-col"
 >
   <p class="text-5xl">Projects</p>
-  <div class="grid mx-auto grid-cols-3 gap-9">
+  <div class="grid mx-auto md:grid-cols-3 gap-9">
     {
       data.map((props) => (
         <Project

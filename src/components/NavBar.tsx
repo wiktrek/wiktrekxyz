@@ -21,8 +21,8 @@ export default function Navbar() {
   const [state, setState] = useState(false);
   return (
     <>
-      <div className="flex top-0 pt-0 sticky justify-between items-center text-2xl">
-        <div className="pl-8">
+      <div className="flex top-0 pt-0 sticky justify-between items-center text-md md:text-2xl">
+        <div className="pl-2 md:pl-8">
           <HoverCard>
             <HoverCardTrigger className="text-primary">
               wiktrek
@@ -32,7 +32,7 @@ export default function Navbar() {
             </HoverCardContent>
           </HoverCard>
         </div>
-        <div className="space-x-8 text-2xl">
+        <div className="space-x-2 md:space-x-8 text-xl md:text-2xl">
           <a href="/">Home</a>
           <a href="/#projects">Projects</a>
           <a href="/skills">Skills</a>
