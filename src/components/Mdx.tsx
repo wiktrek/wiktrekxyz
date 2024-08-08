@@ -37,4 +37,4 @@ export function GoBack() {
     </div>
   );
 }
-export const gh = 'https://github.com/wiktrek/wiktrekxyz/tree/main/data/'
+export const gh = "https://github.com/wiktrek/wiktrekxyz/tree/main/data/";

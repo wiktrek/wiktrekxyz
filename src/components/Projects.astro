@@ -41,25 +41,28 @@ const data: Data[] = [
     span: "made in rust with bevy btw",
     second_title: "Snake made with bevy",
     title: "snake",
-    link: "https://github.com/wiktrek/games/tree/main/snake"
-  }
+    link: "https://github.com/wiktrek/games/tree/main/snake",
+  },
 ];
 ---
 
-<section id="projects" class="flex h-[100vh] text-4xl justify-center text-center items-center flex-col  ">
-  <p class="text-5xl ">Projects</p>
+<section
+  id="projects"
+  class="flex h-[100vh] text-4xl justify-center text-center items-center flex-col"
+>
+  <p class="text-5xl">Projects</p>
   <div class="grid mx-auto grid-cols-3 gap-9">
-  {
-    data.map((props) => (
-      <Project
-        description={props.description}
-        span={props.span}
-        second_title={props.second_title}
-        title={props.title}
-        link={props.link}
-        client:idle
-      />
-    ))
-  }
+    {
+      data.map((props) => (
+        <Project
+          description={props.description}
+          span={props.span}
+          second_title={props.second_title}
+          title={props.title}
+          link={props.link}
+          client:idle
+        />
+      ))
+    }
   </div>
 </section>

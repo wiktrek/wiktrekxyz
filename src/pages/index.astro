@@ -1,10 +1,17 @@
 ---
 import Layout from "~/layouts/Layout.astro";
-import Three from "~/components/three";
----
-<Layout title="wiktrek.xyz">
-    <main class="w-full h-[100vh]">
-        <Three client:only/>
-    </main>
-</Layout>
+import Link from "~/components/Links.astro";
+import Projects from "~/components/Projects.astro";
 
+import { ViewTransitions } from "astro:transitions";
+---
+
+<Layout title="wiktrek.xyz">
+  <main
+    class="justify-center text-center items-center font-mono text-2xl pt-4 text-ring select-none overflow-x-hidden"
+  >
+    <Link />
+    <Projects />
+  </main>
+  <ViewTransitions />
+</Layout>

@@ -1,8 +1,7 @@
 ---
 export const prerender = false;
 let { slug } = Astro.params;
-if (slug) return Astro.redirect(`https://project.wiktrek.xyz/poll/${slug}`)
+if (slug) return Astro.redirect(`https://project.wiktrek.xyz/poll/${slug}`);
 ---
-<a>
-    Redirecting...
-</a>
+
+<a> Redirecting...</a>

@@ -28,8 +28,8 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
     --radius: 0.5rem;
-	color-scheme: dark;
-}
+    color-scheme: dark;
+  }
 }
 
 @layer base {
@@ -40,7 +40,7 @@
     @apply bg-background text-foreground;
   }
 }
- /* @layer utilities {
+/* @layer utilities {
       .no-scrollbar::-webkit-scrollbar {
           display: none;
       }
