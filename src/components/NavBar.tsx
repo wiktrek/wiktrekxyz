@@ -37,7 +37,9 @@ export default function Navbar() {
           <a href="/#projects">Projects</a>
           <a href="/skills">Skills</a>
         </div>
-        <p className="pr-2">Contact me</p>
+        <a className="pr-2" href="https://x.com/wiktrek" target="_blank">
+          Contact me
+        </a>
       </div>
     </>
   );
