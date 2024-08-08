@@ -3,6 +3,7 @@ import { ViewTransitions } from "astro:transitions";
 import type { CollectionEntry } from "astro:content";
 import "../styles/global.css";
 import { getDate } from "../utils/date";
+import NavBar from "~/components/NavBar";
 type Props = CollectionEntry<"blog">["data"];
 const { title, description, publishedAt, img } = Astro.props;
 let image_exists = false;
@@ -18,9 +19,9 @@ if (img !== undefined && img !== "") {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title} - wiktrek.xyz</title>
   </head>
-
   <body>
     <main class="bg-background">
+      <NavBar />
       <article
         class="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl prose-invert mx-auto"
       >

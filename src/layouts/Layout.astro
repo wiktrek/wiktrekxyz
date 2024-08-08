@@ -4,6 +4,8 @@ export interface Props {
   title: string;
 }
 const { title } = Astro.props;
+import NavBar from "~/components/NavBar.tsx";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <html lang="en" translate="no">
@@ -28,6 +30,8 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="font-bold bg-background no-scrollbar scroll-smooth">
+    <NavBar client:only />
     <slot />
   </body>
+  <ViewTransitions />
 </html>

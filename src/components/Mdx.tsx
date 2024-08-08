@@ -27,14 +27,4 @@ interface Props {
 //     </a>
 //   );
 // }
-export function GoBack() {
-  return (
-    <div className="text-2xl pt-2 text-primary-500">
-      <a href="/">
-        <FontAwesomeIcon icon={faArrowLeft} />
-        {" return"}
-      </a>
-    </div>
-  );
-}
 export const gh = "https://github.com/wiktrek/wiktrekxyz/tree/main/data/";
