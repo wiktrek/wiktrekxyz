@@ -27,7 +27,7 @@ export default function Navbar() {
             <HoverCardTrigger className="text-primary hover:text-secondary cursor-pointer">
               wiktrek
             </HoverCardTrigger>
-            <HoverCardContent>
+            <HoverCardContent className="bg-background border-ring">
               <Icons />
             </HoverCardContent>
           </HoverCard>
