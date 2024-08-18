@@ -38,7 +38,6 @@
   }
 }
 body {
-  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 /* Firefox */
