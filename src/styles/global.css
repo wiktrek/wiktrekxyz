@@ -37,8 +37,10 @@
     @apply bg-background text-foreground;
   }
 }
-/* Scrollbar styles */
-
+body {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
 /* Firefox */
 * {
   scrollbar-width: thin;
