@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className="flex top-0 pt-0 sticky justify-between items-center text-md md:text-2xl">
         <div className="pl-2 md:pl-8">
           <HoverCard>
-            <HoverCardTrigger className="text-primary hover:text-secondary cursor-pointer">
+            <HoverCardTrigger className="text-primary hover:text-secondary animate-in transition-all cursor-pointer">
               wiktrek
             </HoverCardTrigger>
             <HoverCardContent className="bg-background border-ring">
@@ -33,18 +33,27 @@ export default function Navbar() {
           </HoverCard>
         </div>
         <div className="space-x-2 md:space-x-8 text-xl md:text-2xl">
-          <a href="/" className="hover:text-secondary">
+          <a
+            href="/"
+            className="hover:text-secondary animate-in transition-all"
+          >
             Home
           </a>
-          <a href="/#projects" className="hover:text-secondary">
+          <a
+            href="/#projects"
+            className="hover:text-secondary animate-in transition-all"
+          >
             Projects
           </a>
-          <a href="/skills" className="hover:text-secondary">
+          <a
+            href="/skills"
+            className="hover:text-secondary animate-in transition-all"
+          >
             Skills
           </a>
         </div>
         <a
-          className="pr-2 hover:text-secondary"
+          className="pr-2 hover:text-secondary animate-in transition-all"
           href="https://x.com/wiktrek"
           target="_blank"
         >
@@ -60,7 +69,7 @@ function Icons() {
       <a
         href="https://github.com/wiktrek"
         target="__blank"
-        className="hover:text-secondary"
+        className="hover:text-secondary animate-in transition-all"
       >
         <FontAwesomeIcon icon={faGithub} />
       </a>
@@ -68,14 +77,14 @@ function Icons() {
       <a
         href="https://discord.com/users/499665258038820866"
         target="__blank"
-        className="hover:text-secondary"
+        className="hover:text-secondary animate-in transition-all"
       >
         <FontAwesomeIcon icon={faDiscord} />
       </a>
       <a
         href="https://www.twitch.tv/wiktrekxyz"
         target="__blank"
-        className="hover:text-secondary"
+        className="hover:text-secondary animate-in transition-all"
       >
         <FontAwesomeIcon icon={faTwitch} />
       </a>
@@ -83,7 +92,7 @@ function Icons() {
       <a
         href="https://www.instagram.com/wiktrekxyz"
         target="__blank"
-        className="hover:text-secondary"
+        className="hover:text-secondary animate-in transition-all"
       >
         <FontAwesomeIcon icon={faInstagram} />
       </a>
@@ -91,7 +100,7 @@ function Icons() {
       <a
         href="https://www.youtube.com/@wiktrek"
         target="__blank"
-        className="hover:text-secondary"
+        className="hover:text-secondary animate-in transition-all"
       >
         <FontAwesomeIcon icon={faYoutube} />
       </a>
@@ -99,7 +108,7 @@ function Icons() {
       <a
         href="https://github.com/wiktrek/wiktrekxyz"
         target="__blank"
-        className="hover:text-secondary"
+        className="hover:text-secondary animate-in transition-all"
       >
         <FontAwesomeIcon icon={faCode} />
       </a>

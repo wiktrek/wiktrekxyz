@@ -1,5 +1,7 @@
 import { useToast } from "~/components/ui/use-toast";
 import { useSpring, animated, type SpringValues } from "@react-spring/web";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 export default function About() {
   const { toast } = useToast();
   const springs = useSpring({
