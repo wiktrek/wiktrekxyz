@@ -1,3 +1,4 @@
+import MillionLint from "@million/lint";
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import tailwind from "@astrojs/tailwind";
@@ -10,6 +11,7 @@ import { custom_pages } from "./data/data.json";
 export default defineConfig({
   site: "https://wiktrek.xyz",
   output: "hybrid",
+
   integrations: [
     mdx(),
     react(),
@@ -20,7 +22,10 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
+
   adapter: vercel({
     includeFiles: ["./data/data.json"],
   }),
+
+  plugins: [MillionLint.vite()]
 });
