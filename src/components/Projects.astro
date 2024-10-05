@@ -55,12 +55,12 @@ const data: Data[] = [
     {
       data.map((props) => (
         <Project
+          client:idle
           description={props.description}
           span={props.span}
           second_title={props.second_title}
           title={props.title}
           link={props.link}
-          client:idle
         />
       ))
     }

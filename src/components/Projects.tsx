@@ -1,6 +1,3 @@
-/* 
-  Fix animation on mobile (some projects might not have a full opacity while scrolling)
-*/
 export interface Props {
   title: string;
   second_title: string;
@@ -9,13 +6,18 @@ export interface Props {
   link?: string;
   image?: string;
 }
-import { Button } from "~/components/ui/button";
 import { useScroll, animated } from "@react-spring/web";
+import { useEffect, useState } from "react";
 export default function Card(props: Props) {
   const { scrollYProgress } = useScroll();
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+  }, []);
+
   return (
     <animated.div
-      style={{ opacity: scrollYProgress }}
+      style={isMobile ? { opacity: 1 } : { opacity: scrollYProgress }}
       className="w-72 h-44 bg-transparent rounded-md text-xl shadow-md text-foreground text-left p-2 hover:cursor-pointer hover:scale-110 animate-out transition-all"
       onClick={() => window.open(props.link)}
     >
