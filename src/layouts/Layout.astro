@@ -31,7 +31,7 @@ import { ViewTransitions } from "astro:transitions";
     <title>{title}</title>
   </head>
   <body class="font-bold bg-background no-scrollbar scroll-smooth">
-    <NavBar client:only />
+    <NavBar client:only="react" />
     <slot />
     <Toaster client:idle />
   </body>
