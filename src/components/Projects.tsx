@@ -10,7 +10,7 @@ import { useScroll, animated } from "@react-spring/web";
 import { useEffect, useState } from "react";
 export default function Card(props: Props) {
   const { scrollYProgress } = useScroll();
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
   useEffect(() => {
     setIsMobile(window.innerWidth <= 768);
   }, []);
