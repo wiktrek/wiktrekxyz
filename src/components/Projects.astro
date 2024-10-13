@@ -1,5 +1,12 @@
 ---
-import Project, { type Props as Data } from "~/components/Projects.tsx";
+export interface Data {
+  title: string;
+  second_title: string;
+  description: string;
+  span: string;
+  link?: string;
+  image?: string;
+}
 const data: Data[] = [
   {
     description: "My website with other cool projects",
@@ -51,17 +58,19 @@ const data: Data[] = [
   class="flex h-[100vh] text-4xl justify-center text-center items-center flex-col"
 >
   <p class="text-5xl">Projects</p>
-  <div class="grid mx-auto md:grid-cols-3 gap-9">
+  <div class="text-text font-normal text-xl text-left">
     {
       data.map((props) => (
-        <Project
-          client:idle
-          description={props.description}
-          span={props.span}
-          second_title={props.second_title}
-          title={props.title}
-          link={props.link}
-        />
+        <p class="flex">
+          <a
+            class="text-primary hover:underline"
+            href={props.link}
+            target="_blank"
+          >
+            {props.title.trim()}
+          </a>
+          :{props.description}
+        </p>
       ))
     }
   </div>
