@@ -21,7 +21,7 @@ export default function About() {
   });
   return (
     <section id="about" className="pt-96 h-[100vh] text-4xl ">
-      <animated.p style={{ ...springs }}>
+      <animated.h1 style={{ ...springs }}>
         Hello, I'm{" "}
         <animated.a
           style={{ ...changeColor }}
@@ -30,10 +30,11 @@ export default function About() {
         >
           wiktrek
         </animated.a>
-      </animated.p>
-      <animated.p className="text-xl" style={{ ...springs2 }}>
+        .
+      </animated.h1>
+      <animated.h2 className="text-xl" style={{ ...springs2 }}>
         I love programming and building stuff
-      </animated.p>
+      </animated.h2>
     </section>
   );
 }

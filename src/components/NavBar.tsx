@@ -24,7 +24,10 @@ export default function Navbar() {
       <div className="flex top-0 pt-0 sticky justify-between items-center text-md md:text-2xl">
         <div className="pl-2 md:pl-8">
           <HoverCard>
-            <HoverCardTrigger className="text-primary hover:text-secondary animate-in transition-all cursor-pointer">
+            <HoverCardTrigger
+              className="text-primary hover:text-secondary animate-in transition-all cursor-pointer"
+              href="https://github.com/wiktrek"
+            >
               wiktrek
             </HoverCardTrigger>
             <HoverCardContent className="bg-background border-ring">
