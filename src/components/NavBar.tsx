@@ -21,21 +21,8 @@ export default function Navbar() {
   const [state, setState] = useState(false);
   return (
     <>
-      <div className="flex top-0 pt-0 sticky justify-between items-center text-md md:text-2xl">
-        <div className="pl-2 md:pl-8">
-          <HoverCard>
-            <HoverCardTrigger
-              className="text-primary hover:text-secondary animate-in transition-all cursor-pointer"
-              href="https://github.com/wiktrek"
-            >
-              wiktrek
-            </HoverCardTrigger>
-            <HoverCardContent className="bg-background border-ring">
-              <Icons />
-            </HoverCardContent>
-          </HoverCard>
-        </div>
-        <div className="space-x-2 md:space-x-8 text-xl md:text-2xl">
+      <div className="flex top-0 pt-0 sticky items-center text-md md:text-2 justify-center font-medium">
+        <div className="text-xl md:text-2xl space-x-4">
           <a
             href="/"
             className="hover:text-secondary animate-in transition-all"
@@ -55,13 +42,6 @@ export default function Navbar() {
             Skills
           </a>
         </div>
-        <a
-          className="pr-2 hover:text-secondary animate-in transition-all"
-          href="https://x.com/wiktrek"
-          target="_blank"
-        >
-          Contact me
-        </a>
       </div>
     </>
   );
