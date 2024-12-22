@@ -26,6 +26,12 @@ if (img !== undefined && img !== "") {
         class="prose prose-sm sm:prose-base lg:prose-base xl:prose-md 2xl:prose-lg prose-invert mx-auto"
       >
         <slot class="" />
+        <div class="text-sm">
+          <p>
+            Written by <a href="https://github.com/wiktrek">wiktrek</a>
+          </p>
+          {getDate(publishedAt)}
+        </div>
       </article>
     </main>
   </body>
