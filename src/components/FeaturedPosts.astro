@@ -12,7 +12,7 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 <section id="blog" class="bg-transparent py-24 h-[80vh]">
   <ViewTransitions />
   <h1 class="text-5xl font-bold text-ring">Blog posts</h1>
-  <ul class="pt-4 grid gap-5 grid-cols-1">
+  <ul class="pt-4 flex-col flex justify-center text-center items-center">
     {
       featuredPosts.map(({ data }) => (
         <Card frontmatter={data} secHeading={false} />

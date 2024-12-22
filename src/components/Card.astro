@@ -12,13 +12,21 @@ function redirect() {
 }
 ---
 
-<div class="grid border border-ring w-64 rounded-xl m-auto h-72 text-[#fbfdfe]">
+<!-- <div class="border border-ring w-72 rounded-xl m-auto h-80 text-text p-4">
   <a href={`/blog/${postSlug}`}>
-    <p class="text-center text-2xl font-semibold pt-4 text-ring">
+    <p class="text-center text-2xl font-semibold pt-4 text-primary">
       {title}
     </p>
     <p class="text-xl line-clamp-2 pt-2">{description}</p>
     <p class="text-lg">{getDate(publishedAt)}</p>
   </a>
+  <ViewTransitions />
+</div> -->
+<div class="text-left w-96 pt-4">
+  <p class="text-base text-primary">{title}</p>
+  <p class="text-sm text-secondary">{description}</p>
+  <a class="text-sm underline text-accent" href={`/blog/${postSlug}`}
+    >Read more -&gt</a
+  >
   <ViewTransitions />
 </div>

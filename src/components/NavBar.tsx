@@ -36,10 +36,10 @@ export default function Navbar() {
             Projects
           </a>
           <a
-            href="/skills"
+            href="/about"
             className="hover:text-secondary animate-in transition-all"
           >
-            Skills
+            About
           </a>
         </div>
       </div>
