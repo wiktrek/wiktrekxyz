@@ -2,7 +2,7 @@ import { defineCollection, z } from "astro:content";
 function new_date(date: string): Date {
   var date_components = date.split(".");
   var day = Number(date_components[0]);
-  var month = Number(date_components[1]);
+  var month = Number(date_components[1]) - 1;
   var year = Number(date_components[2]);
   return new Date(year, month, day);
 }
