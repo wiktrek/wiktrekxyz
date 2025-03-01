@@ -17,6 +17,9 @@ const blogSchema = z.object({
   postSlug: z.string(),
   img: z.string().default(""),
   featured: z.boolean().default(false),
+  keywords: z
+    .string()
+    .default("wiktrek, programming, web development, wiktrek.xyz"),
 });
 const blogCollection = defineCollection({
   type: "content",

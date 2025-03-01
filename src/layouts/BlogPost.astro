@@ -5,7 +5,7 @@ import "../styles/global.css";
 import { getDate } from "../utils/date";
 import NavBar from "~/components/NavBar";
 type Props = CollectionEntry<"blog">["data"];
-const { title, description, publishedAt, img } = Astro.props;
+const { title, description, publishedAt, img, keywords } = Astro.props;
 let image_exists = false;
 if (img !== undefined && img !== "") {
   image_exists = true;
@@ -16,6 +16,10 @@ if (img !== undefined && img !== "") {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="wiktrek" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title} - wiktrek.xyz</title>
   </head>
