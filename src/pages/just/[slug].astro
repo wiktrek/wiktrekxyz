@@ -10,10 +10,32 @@ const formattedSlug = slug
 console.log(formattedSlug);
 ---
 
-<NoNav title={formattedSlug + "? - wiktrek.xyz"}>
-  <div class="justify-center flex">
-    <p class="w-96">"{formattedSlug}?" - just google it</p>
-
-    <a class="underline" href="/just/generate">Generate your own</a>
+<NoNav title={formattedSlug + " - wiktrek.xyz"}>
+  <div class="justify-center flex text-2xl">
+    <div class="flex-col">
+      <p class="w-[36rem]">
+        "{formattedSlug}" - just google it
+        <a
+          class="underline"
+          href=`https://letmegooglethat.com/?q=${formattedSlug}`
+          >or let me google it for you</a
+        >
+      </p>
+      <p class="mt-4">Why is Googling important?</p>
+      <p class="text-base w-[36rem]">
+        Googling has become an essential skill in today's digital world,
+        offering instant access to vast amounts of information. It empowers
+        individuals to learn independently, solve problems quickly, and stay
+        updated on current events. With Google, you can find solutions to
+        everyday issues, explore different perspectives, and boost creativity.
+        It also encourages critical thinking, helping users assess the
+        credibility of sources and distinguish reliable information. Overall,
+        Googling enhances efficiency and is a key tool for navigating and
+        understanding the modern world. - ChatGPT
+      </p>
+    </div>
   </div>
+  <footer class="bottom-4 w-full text-center fixed text-lg">
+    <a class="underline" href="/just/generate">Generate your own</a>
+  </footer>
 </NoNav>
