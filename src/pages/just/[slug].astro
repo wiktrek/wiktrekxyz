@@ -1,0 +1,19 @@
+---
+import NoNav from "~/layouts/NoNav.astro";
+
+export const prerender = false;
+let { slug } = Astro.params;
+const formattedSlug = slug
+  ?.replaceAll("%20", " ")
+  .replaceAll("%3F", "?")
+  .replaceAll('"', "") as string;
+console.log(formattedSlug);
+---
+
+<NoNav title={formattedSlug + "? - wiktrek.xyz"}>
+  <div class="justify-center flex">
+    <p class="w-96">"{formattedSlug}?" - just google it</p>
+
+    <a class="underline" href="/just/generate">Generate your own</a>
+  </div>
+</NoNav>

@@ -1,0 +1,38 @@
+---
+import "../styles/global.css";
+export interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+import NavBar from "~/components/NavBar.tsx";
+import { Toaster } from "~/components/ui/toaster";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<html lang="en" translate="no">
+  <head>
+    <meta charset="UTF-8" /><meta
+      name="description"
+      content="wiktrek's website"
+    />
+    <meta name="msvalidate.01" content="BDA24E1E4A734EE0DC05033EFEDA63E5" />
+    <meta
+      name="keywords"
+      content="wiktrek, wiktrek.xyz, wiktrek website, wiktor, wiktorek, xyz, wiktrek xyz, wiktor, wiktorek, wiktorek website, wiktor website, wiktrek.com, wiktrek.pl, wiktrek.org, wiktrek.net,software,programming,next.js,react,rust,typescript"
+    />
+    <meta name="viewport" content="width=device-width" /><link
+      rel="icon"
+      href="/favicon.svg"
+    />
+    <link rel="sitemap" href="/sitemap.xml" /><meta
+      name="generator"
+      content={Astro.generator}
+    />
+    <title>{title}</title>
+  </head>
+  <body class="font-bold bg-background no-scrollbar scroll-smooth">
+    <slot />
+    <Toaster client:idle />
+  </body>
+  <ViewTransitions />
+</html>
