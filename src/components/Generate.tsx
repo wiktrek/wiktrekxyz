@@ -19,14 +19,20 @@ export default function GenerateLink() {
       <Textarea
         placeholder="Enter your question here"
         onChange={(e) => setLink(format(e.target.value))}
-        className="w-96 p-4 m-2 rounded"
+        className="w-96 p-4 m-2 rounded resize-none"
       />
       <Textarea
         value={link}
-        className="w-96 p-4 m-2 rounded h-32"
+        className="w-96 p-4 m-2 rounded h-32 resize-none"
         placeholder="https://wiktrek.xyz/just/"
       />
       <button onClick={CopyLink}>Copy Link</button>
+      <p>
+        You can this link shorter with my{" "}
+        <a className="underline" href="https://project.wiktrek.xyz/url">
+          link shortener
+        </a>
+      </p>
     </div>
   );
 }
