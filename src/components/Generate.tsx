@@ -28,7 +28,7 @@ export default function GenerateLink() {
       />
       <button onClick={CopyLink}>Copy Link</button>
       <p>
-        You can this link shorter with my{" "}
+        You can make this link shorter with my{" "}
         <a className="underline" href="https://project.wiktrek.xyz/url">
           link shortener
         </a>
