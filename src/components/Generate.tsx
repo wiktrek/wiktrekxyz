@@ -12,7 +12,7 @@ export default function GenerateLink() {
     });
   }
   function format(text: string): string {
-    return `https://wiktrek.xyz/just/q?q="${text}"`;
+    return `https://wiktrek.xyz/just/q?q="${text.replaceAll(" ", "%20")}"`;
   }
   return (
     <div className="justify-center items-center flex flex-col m-10">

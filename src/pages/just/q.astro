@@ -4,7 +4,7 @@ const queryParams = Astro.url.searchParams;
 export const prerender = false;
 const searchParam = queryParams.get("q");
 const decodedSearchParam = searchParam
-  ? decodeURIComponent(searchParam).replaceAll('"', "")
+  ? decodeURIComponent(searchParam).replaceAll('"', "").replaceAll("%20", " ")
   : null;
 console.log(decodedSearchParam);
 ---
