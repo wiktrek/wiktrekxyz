@@ -12,7 +12,7 @@ export default function GenerateLink() {
     });
   }
   function format(text: string): string {
-    return `https://wiktrek.xyz/just/"${text.replaceAll(" ", "%20").replaceAll("?", "%3F")}"`;
+    return `https://wiktrek.xyz/just/q?q="${text}"`;
   }
   return (
     <div className="justify-center items-center flex flex-col m-10">
@@ -24,7 +24,7 @@ export default function GenerateLink() {
       <Textarea
         value={link}
         className="w-96 p-4 m-2 rounded h-32 resize-none"
-        placeholder="https://wiktrek.xyz/just/"
+        placeholder={'https://wiktrek.xyz/just/q?q=""'}
       />
       <button onClick={CopyLink}>Copy Link</button>
       <p>

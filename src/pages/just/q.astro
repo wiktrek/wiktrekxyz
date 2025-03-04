@@ -1,23 +1,21 @@
 ---
 import NoNav from "~/layouts/NoNav.astro";
-
+const queryParams = Astro.url.searchParams;
 export const prerender = false;
-let { slug } = Astro.params;
-const formattedSlug = slug
-  ?.replaceAll("%20", " ")
-  .replaceAll("%3F", "?")
-  .replaceAll('"', "") as string;
-console.log(formattedSlug);
+const searchParam = queryParams.get("q");
+const decodedSearchParam = searchParam
+  ? decodeURIComponent(searchParam).replaceAll('"', "")
+  : null;
+console.log(decodedSearchParam);
 ---
 
-<NoNav title={formattedSlug + " - wiktrek.xyz"}>
+<NoNav title={decodedSearchParam + " - wiktrek.xyz"}>
   <div class="justify-center flex text-2xl">
     <div class="flex-col">
       <p class="w-[36rem]">
-        "{formattedSlug}" - just google it
-        <a
+        "{decodedSearchParam}" - just google it <a
           class="underline"
-          href=`https://letmegooglethat.com/?q=${formattedSlug}`
+          href=`https://letmegooglethat.com/?q=${decodedSearchParam}`
           >or let me google it for you</a
         >
       </p>
