@@ -1,7 +1,40 @@
 ---
 import Layout from "~/layouts/Layout.astro";
+import NoNav from "~/layouts/NoNav.astro";
+const queryParams = Astro.url.searchParams;
+export const prerender = false;
+const searchParam = queryParams.get("q");
+const decodedSearchParam = searchParam
+  ? decodeURIComponent(searchParam).replaceAll('"', "").replaceAll("%20", " ")
+  : null;
+console.log(decodedSearchParam);
 ---
-
+{decodedSearchParam ?
+ <NoNav title={decodedSearchParam + " - wiktrek.xyz"}>
+  <div class="justify-center flex text-2xl">
+    <div class="flex-col">
+      <p class="w-[36rem]">
+        "{decodedSearchParam}" - just google it <a
+          class="underline"
+          href=`https://letmegooglethat.com/?q=${decodedSearchParam}`
+          >or let me google it for you</a
+        >
+      </p>
+      <p class="mt-4">Why is Googling important? Let me ask chatGPT.</p>
+      <p class="text-base w-[36rem]">
+        Googling is essential because it gives instant access to information,
+        helping with learning, productivity, and decision-making. It saves time,
+        solves problems, and allows fact-checking to avoid misinformation.
+        Whether for work, studies, or daily life, mastering search skills
+        improves efficiency and critical thinking in the digital age. - ChatGPT
+      </p>
+    </div>
+  </div>
+  <footer class="bottom-4 w-full text-center fixed text-lg">
+    <a class="underline" href="/just/generate">Generate your own</a>
+  </footer>
+</NoNav>
+:
 <Layout title="just google it - wiktrek.xyz">
   <div class="justify-center flex">
     <div class="flex-col w-[36rem] text-xl">
@@ -25,3 +58,4 @@ import Layout from "~/layouts/Layout.astro";
     </div>
   </div>
 </Layout>
+}
