@@ -23,7 +23,8 @@ export default function GenerateLink() {
       />
       <Textarea
         value={link}
-        className="w-96 p-4 m-2 rounded h-32 resize-none"
+        readOnly
+        className="w-96 p-4 m-2 rounded h-32 resize-none border-white"
         placeholder="https://wiktrek.xyz/just/"
       />
       <button onClick={CopyLink}>Copy Link</button>
