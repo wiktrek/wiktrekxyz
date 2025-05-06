@@ -22,10 +22,10 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
-
+  prefetch: true,
   adapter: vercel({
     includeFiles: ["./data/data.json"],
   }),
 
-  plugins: [MillionLint.vite()]
+  plugins: [MillionLint.vite()],
 });
