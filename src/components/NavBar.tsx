@@ -46,7 +46,7 @@ export default function Navbar() {
 }
 export function Icons() {
   return (
-    <li className="list-none space-x-2">
+    <li className="list-none space-x-2 pt-4">
       <a
         href="https://github.com/wiktrek"
         target="__blank"

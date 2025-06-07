@@ -13,9 +13,11 @@ function redirect() {
 ---
 
 <a href={`/blog/${postSlug}`} data-astro-prefetch>
-  <div class="text-left w-96 pt-4 h-28 shadow transition-all hover:scale-105">
-    <p class="text-base text-primary">{title}</p>
-    <p class="text-sm text-secondary pt-2">{description}</p>
+  <div
+    class="text-left w-64 md:w-96 pt-4 h-28 shadow transition-all hover:scale-105"
+  >
+    <p class="text-sm md:text-base text-primary">{title}</p>
+    <p class="text-xs md:text-sm text-secondary pt-2">{description}</p>
     <a
       class="text-sm underline text-accent"
       href={`/blog/${postSlug}`}
