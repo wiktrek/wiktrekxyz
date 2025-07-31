@@ -33,7 +33,8 @@ const mods = [
 <Layout title="Best client-side mods">
   <section class="flex flex-col justify-center items-center">
     <h1 class="text-xl w-80 md:w-[40rem]">
-      The links are either to github or modrinth
+      This is a list of mods I find useful and use while playing minecraft.The
+      links are either to github or modrinth.
     </h1>
     <ul class="">
       {
@@ -41,7 +42,7 @@ const mods = [
           <li class="w-80 md:w-[40rem] pt-2">
             <h2>{m.name}</h2>
             <h3>{m.description}</h3>
-            <a href={m.link} class="text-accent">
+            <a href={m.link} class="text-accent underline">
               Download here.
             </a>
           </li>
