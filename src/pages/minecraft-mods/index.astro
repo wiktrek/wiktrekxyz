@@ -1,0 +1,52 @@
+---
+import Layout from "~/layouts/Layout.astro";
+interface Mod {
+  name: string;
+  description: string;
+  link: string;
+}
+const mods = [
+  {
+    name: "Carpet",
+    description: "This mod is soooo awesome. Player command is so useful.",
+    link: "https://github.com/gnembon/fabric-carpet",
+  },
+  {
+    name: "Litematica",
+    description: "I don't think I have to explain what litematica is.",
+    link: "https://modrinth.com/mod/litematica",
+  },
+  {
+    name: "Tweakeroo",
+    description: "Tweakeroo adds a bunch of useful tweaks to the game.",
+    link: "https://modrinth.com/mod/tweakeroo",
+  },
+  {
+    name: "MiniHUD",
+    description:
+      "MiniHUD adds a bunch of different renderers and can add stuff from F3 to your HUD.",
+    link: "https://modrinth.com/mod/minihud",
+  },
+] as Mod[];
+---
+
+<Layout title="Best client-side mods">
+  <section class="flex flex-col justify-center items-center">
+    <h1 class="text-xl w-80 md:w-[40rem]">
+      The links are either to github or modrinth
+    </h1>
+    <ul class="">
+      {
+        mods.map((m) => (
+          <li class="w-80 md:w-[40rem] pt-2">
+            <h2>{m.name}</h2>
+            <h3>{m.description}</h3>
+            <a href={m.link} class="text-accent">
+              Download here.
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>
