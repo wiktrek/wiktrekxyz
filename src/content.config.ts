@@ -1,4 +1,5 @@
 import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
 function new_date(date: string): Date {
   var date_components = date.split(".");
   var day = Number(date_components[0]);
@@ -14,7 +15,6 @@ const blogSchema = z.object({
     .or(z.date())
     .transform((val) => new_date(val as string)),
   description: z.string(),
-  postSlug: z.string(),
   img: z.string().default(""),
   featured: z.boolean().default(false),
   keywords: z
@@ -22,7 +22,7 @@ const blogSchema = z.object({
     .default("wiktrek, programming, web development, wiktrek.xyz"),
 });
 const blogCollection = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/blog" }),
   schema: blogSchema,
 });
 export type BlogSchema = z.infer<typeof blogSchema>;

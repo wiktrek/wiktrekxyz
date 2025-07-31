@@ -1,9 +1,9 @@
 ---
-import { ViewTransitions } from "astro:transitions";
 import type { CollectionEntry } from "astro:content";
 import "../styles/global.css";
 import { getDate } from "../utils/date";
 import NavBar from "~/components/NavBar";
+import { ClientRouter } from "astro:transitions";
 type Props = CollectionEntry<"blog">["data"];
 const { title, description, publishedAt, img, keywords } = Astro.props;
 let image_exists = false;
@@ -22,10 +22,11 @@ if (img !== undefined && img !== "") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title} - wiktrek.xyz</title>
+  <ClientRouter />
   </head>
   <body>
     <main class="bg-background">
-      <NavBar />
+      <NavBar client:only="react"/>
       <article
         class="prose prose-sm sm:prose-lg lg:prose-base xl:prose-md 2xl:prose-lg prose-invert mx-auto"
       >
@@ -39,5 +40,4 @@ if (img !== undefined && img !== "") {
       </article>
     </main>
   </body>
-  <ViewTransitions />
 </html>

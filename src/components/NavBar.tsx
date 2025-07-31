@@ -19,7 +19,7 @@ config.autoAddCss = false;
 export default function Navbar() {
   return (
     <>
-      <div className="flex top-0 pt-6 items-center text-md md:text-2 justify-center font-medium">
+      <div className="flex top-0 pt-6 items-center text-md md:text-2 justify-center font-bold">
         <div className="text-xl md:text-2xl space-x-4">
           <a
             href="/"

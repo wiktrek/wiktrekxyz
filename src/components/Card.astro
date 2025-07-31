@@ -1,18 +1,18 @@
 ---
-import type { BlogSchema } from "../content/config";
+import type { BlogSchema } from "../content.config";
 import { getDate } from "../utils/date";
-import { ViewTransitions } from "astro:transitions";
 export interface Props {
   frontmatter: BlogSchema;
+  id: string;
   secHeading?: boolean;
 }
-const { description, postSlug, publishedAt, title } = Astro.props.frontmatter;
+const { description, publishedAt, title } = Astro.props.frontmatter;
 function redirect() {
   Astro.redirect(`/blog/#{postSlug}`);
 }
 ---
 
-<a href={`/blog/${postSlug}`} data-astro-prefetch>
+<a href={`/blog/${Astro.props.id}`} data-astro-prefetch>
   <div
     class="text-left w-64 md:w-96 pt-4 h-28 shadow transition-all hover:scale-105"
   >
@@ -20,9 +20,8 @@ function redirect() {
     <p class="text-xs md:text-sm text-secondary pt-2">{description}</p>
     <a
       class="text-sm underline text-accent"
-      href={`/blog/${postSlug}`}
+      href={`/blog/${Astro.props.id}`}
       data-astro-prefetch>Read more -&gt</a
     >
-    <ViewTransitions />
   </div>
 </a>

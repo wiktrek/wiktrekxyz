@@ -2,7 +2,6 @@
 import Card from "../components/Card.astro";
 import { getCollection } from "astro:content";
 import sortPosts from "../utils/sortPosts";
-import { ViewTransitions } from "astro:transitions";
 
 const posts = await getCollection("blog");
 const sortedPosts = sortPosts(posts);
@@ -10,12 +9,11 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 ---
 
 <section id="blog" class="bg-transparent pt-24 h-[80vh]">
-  <ViewTransitions />
   <h1 class="text-5xl font-bold text-ring">Blog posts</h1>
   <ul class="pt-4 flex-col flex justify-center text-center items-center">
     {
-      featuredPosts.map(({ data }) => (
-        <Card frontmatter={data} secHeading={false} />
+      featuredPosts.map(({ data, id }) => (
+        <Card frontmatter={data} secHeading={false} id={id}/>
       ))
     }
   </ul>
