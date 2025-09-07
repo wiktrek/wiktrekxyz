@@ -64,13 +64,13 @@ const data: Data[] = [
   id="projects"
   class="flex h-[100vh] text-lg md:text-4xl justify-center text-center items-center flex-col"
 >
-  <h1 class="text-5xl">Projects</h1>
+  <h1 class="text-4xl md:text-5xl">Projects</h1>
   <div class="text-text font-normal text-lg md:text-xl text-left text-wrap">
     {
       data.map((props) => (
-        <p class="flex">
+        <p class="flex px-2">
           <a
-            class="text-primary hover:underline"
+            class="text-primary hover:underline font-bold"
             href={props.link}
             target="_blank"
           >

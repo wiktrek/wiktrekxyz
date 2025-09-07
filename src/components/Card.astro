@@ -14,10 +14,10 @@ function redirect() {
 
 <a href={`/blog/${Astro.props.id}`} data-astro-prefetch>
   <div
-    class="text-left w-64 md:w-96 pt-4 h-28 shadow transition-all hover:scale-105"
+    class="text-left w-72 md:w-96 pt-4 h-32 shadow transition-all hover:scale-105"
   >
-    <p class="text-sm md:text-base text-primary">{title}</p>
-    <p class="text-xs md:text-sm text-secondary pt-2">{description}</p>
+    <p class="text-lg md:text-base text-primary">{title}</p>
+    <p class="text-sm md:text-sm text-secondary pt-2">{description}</p>
     <a
       class="text-sm underline text-accent"
       href={`/blog/${Astro.props.id}`}
