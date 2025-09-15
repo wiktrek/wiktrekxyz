@@ -14,6 +14,10 @@ const blogSchema = z.object({
     .string()
     .or(z.date())
     .transform((val) => new_date(val as string)),
+  UpdatedAt: z
+    .string()
+    .or(z.date())
+    .transform((val) => new_date(val as string)).optional(),
   description: z.string(),
   img: z.string().default(""),
   featured: z.boolean().default(false),
