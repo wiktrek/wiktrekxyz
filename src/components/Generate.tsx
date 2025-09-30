@@ -26,7 +26,7 @@ export default function GenerateLink() {
         className="w-96 p-4 m-2 rounded h-32 resize-none"
         placeholder={'https://wiktrek.xyz/just?q=""'}
       />
-      <button onClick={CopyLink}>Copy Link</button>
+      <button onClick={CopyLink} className="font-bold">Copy Link</button>
       <p>
         You can make this link shorter with my{" "}
         <a className="underline" href="https://project.wiktrek.xyz/url">
