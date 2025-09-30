@@ -18,7 +18,7 @@ export default function About() {
     delay: 800,
   });
   return (
-    <section id="about" className="md:h-[60vh] md:text-4xl h-[100vh] text-3xl">
+    <section id="about" className="md:h-[60vh] md:text-4xl h-[100vh] text-3xl overflow-hidden">
       <animated.h1 style={{ ...springs }}>
         Hello, I'm{" "}
         <animated.a
