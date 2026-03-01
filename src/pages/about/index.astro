@@ -1,9 +1,8 @@
 ---
-import { Icons } from "~/components/NavBar";
 import Layout from "~/layouts/Layout.astro";
 ---
 
-<Layout title="skills - wiktrek.xyz">
+<Layout title="about - wiktrek.xyz">
   <div
     class="justify-center
     flex
@@ -13,14 +12,29 @@ import Layout from "~/layouts/Layout.astro";
     text-ring
     overflow-x-hidden"
   >
-    <div class="w-[36rem]">
+    <div class="w-[48rem]">
       <p class="text-text">
         I'm a highschool student from Poland studying computer programming. I
         love writing code and building stuff.
       </p>
-      <a href="/cv.txt">My very real CV</a>
+      <h1 class="pt-2">Contact</h1>
+      <p class="text-text">You can contact me through <a href="mailto:me@wiktrek.xyz" class="text-primary underline">email</a> or <a href="https://matrix.to/#/@wiktrek:matrix.org" class="text-primary underline">matrix</a></p>
       <p>My links:</p>
-      <Icons />
+      <ul class="">
+        <li>
+          <a href="https://discord.com/users/499665258038820866/" target="_blank" class="text-xl text-primary underline">Discord</a>
+        </li>
+        <li>
+          <a href="https://github.com/wiktrek" target="_blank" class="text-xl text-primary underline">Github</a>
+        </li>
+        <li>
+          <a href="https://x.com/wiktrek" target="_blank" class="text-xl text-primary underline">X (Twitter)</a>
+        </li>
+        <li>
+          <a href="https://instagram.com/wiktrekxyz/" target="_blank" class="text-xl text-primary underline">Instagram</a>
+        </li>
+      </ul>
+      <p class="text-text pt-2">My very real <a href="/cv.txt" class="text-primary underline">CV</a></p>
     </div>
   </div>
 </Layout>
