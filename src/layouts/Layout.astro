@@ -1,10 +1,17 @@
 ---
 import "../styles/global.css";
+import { getCollection } from "astro:content";
+import sortPosts from "~/utils/sortPosts";
 export interface Props {
   title: string;
 }
 const { title } = Astro.props;
+const blogPosts = sortPosts(await getCollection("blog")).map(({ id, data }) => ({
+  id,
+  title: data.title,
+}));
 import NavBar from "~/components/NavBar";
+import KeyboardShortcuts from "~/components/KeyboardShortcuts";
 import { Toaster } from "~/components/ui/toaster";
 import { ClientRouter } from "astro:transitions";
 ---
@@ -34,6 +41,7 @@ import { ClientRouter } from "astro:transitions";
   <body class="font-bold bg-background">
     <NavBar client:only="react" />
     <slot />
+    <KeyboardShortcuts client:only="react" blogPosts={blogPosts} />
     <Toaster client:idle />
   </body>
 </html>
