@@ -4,6 +4,7 @@ import { Command } from "cmdk";
 type BlogPost = {
   id: string;
   title: string;
+  description: string;
 };
 
 type Props = {
@@ -104,6 +105,11 @@ export default function KeyboardShortcuts({ blogPosts }: Props) {
     navigation(path);
   };
 
+  const groupClassName =
+    "pb-2 [&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:pb-1 [&_[cmdk-group-heading]]:pt-3 [&_[cmdk-group-heading]]:text-xl [&_[cmdk-group-heading]]:text-ring";
+  const itemClassName =
+    "group flex cursor-pointer items-center justify-between gap-4 px-3 py-2 outline-none transition-all";
+
   return (
     <>
       <button
@@ -112,75 +118,75 @@ export default function KeyboardShortcuts({ blogPosts }: Props) {
         aria-haspopup="dialog"
         aria-expanded={isOpen}
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-5 right-5 z-40 border border-primary/40 bg-background/90 px-3 py-2 font-mono text-sm font-bold text-primary shadow-lg backdrop-blur transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+        className="fixed bottom-5 right-5 z-40 bg-background/80 px-3 py-2 font-mono text-base font-bold text-primary backdrop-blur transition-all hover:text-secondary focus-visible:underline focus-visible:outline-none"
       >
-        search <kbd className="ml-1 border border-primary/50 px-1.5 py-0.5 text-xs">{isMac ? "⌘K" : "Ctrl K"}</kbd>
+        search <span className="text-accent">{isMac ? "⌘K" : "Ctrl K"}</span>
       </button>
 
       <Command.Dialog
         open={isOpen}
         onOpenChange={setIsOpen}
         label="Command menu"
-        overlayClassName="fixed inset-0 z-50 bg-black/70 px-4 backdrop-blur-sm"
-        contentClassName="fixed left-1/2 top-[18vh] z-50 w-[min(92vw,560px)] -translate-x-1/2 overflow-hidden border border-primary/50 bg-background font-mono text-text shadow-2xl"
+        overlayClassName="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm"
+        contentClassName="fixed left-1/2 top-[18vh] z-50 w-[min(92vw,560px)] -translate-x-1/2 overflow-hidden bg-background font-mono font-bold text-text shadow-2xl shadow-black"
       >
         <Command.Input
           autoFocus
-          placeholder="What do you want to do?"
-          className="w-full border-b border-primary/30 bg-transparent px-5 py-4 text-base text-ring outline-none placeholder:text-text/50"
+          placeholder="Where to?"
+          className="w-full bg-transparent px-6 pb-2 pt-6 text-xl text-ring outline-none placeholder:text-primary/50"
         />
-        <Command.List className="max-h-[min(60vh,380px)] overflow-y-auto p-2">
-          <Command.Empty className="px-3 py-8 text-center text-sm text-text/70">
-            No matching commands.
+        <Command.List className="max-h-[min(60vh,420px)] overflow-y-auto px-3 pb-4">
+          <Command.Empty className="px-3 py-8 text-center text-base font-normal text-secondary">
+            Nothing here. Try something else.
           </Command.Empty>
-          <Command.Group heading="Navigate" className="px-1 pb-2 text-xs text-primary [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.2em]">
+          <Command.Group heading="Navigate" className={groupClassName}>
             {commands.map((command) => (
               <Command.Item
                 key={command.value}
                 value={`${command.value} ${command.label}`}
                 onSelect={() => runCommand(command.path)}
-                className="flex cursor-pointer items-center justify-between gap-4 px-3 py-3 text-base text-text outline-none aria-selected:bg-secondary aria-selected:text-ring"
+                className={itemClassName}
               >
-                <span>{command.label}</span>
-                <span className="flex shrink-0 gap-1">
-                  {command.keys.map((key) => (
-                    <kbd key={key} className="min-w-7 border border-primary/40 px-1.5 py-0.5 text-center text-sm text-primary">
-                      {key}
-                    </kbd>
-                  ))}
+                <span className="text-primary group-aria-selected:text-secondary group-aria-selected:underline">
+                  {command.label}
+                </span>
+                <span className="shrink-0 text-sm text-accent">
+                  {command.keys.join(" then ")}
                 </span>
               </Command.Item>
             ))}
           </Command.Group>
-          <Command.Separator className="my-2 h-px bg-primary/20" />
-          <Command.Group heading="Blog posts" className="px-1 pb-2 text-xs text-primary [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.2em]">
+          <Command.Group heading="Blog posts" className={groupClassName}>
             {blogPosts.map((post) => (
               <Command.Item
                 key={post.id}
-                value={`${post.title} blog post`}
+                value={`${post.title} ${post.description} blog post`}
                 onSelect={() => runCommand(`/blog/${post.id}`)}
-                className="flex cursor-pointer items-center justify-between gap-4 px-3 py-3 text-base text-text outline-none aria-selected:bg-secondary aria-selected:text-ring"
+                className={itemClassName}
               >
-                <span>{post.title}</span>
-                <span className="text-xs text-text/60">blog</span>
+                <span className="min-w-0">
+                  <span className="block text-primary group-aria-selected:text-secondary group-aria-selected:underline">
+                    {post.title}
+                  </span>
+                  <span className="block truncate text-sm text-secondary">
+                    {post.description}
+                  </span>
+                </span>
+                <span className="shrink-0 text-sm text-accent opacity-0 group-aria-selected:opacity-100">
+                  -&gt;
+                </span>
               </Command.Item>
             ))}
           </Command.Group>
-          <Command.Separator className="my-2 h-px bg-primary/20" />
-          <Command.Group heading="Help" className="px-1 text-xs text-primary [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.2em]">
-            <Command.Item
-              value="keyboard shortcuts help"
-              onSelect={() => setIsOpen(false)}
-              className="flex cursor-pointer items-center justify-between px-3 py-3 text-base text-text outline-none aria-selected:bg-secondary aria-selected:text-ring"
-            >
-              <span>Close command menu</span>
-              <kbd className="border border-primary/40 px-1.5 py-0.5 text-sm text-primary">esc</kbd>
-            </Command.Item>
-          </Command.Group>
         </Command.List>
-        <div className="flex items-center justify-between border-t border-primary/20 px-5 py-3 text-xs text-text/60">
-          <span>Type to filter commands</span>
-          <span><kbd className="border border-primary/30 px-1">↑↓</kbd> select <kbd className="border border-primary/30 px-1">↵</kbd> run</span>
+        <div className="flex items-center justify-between px-6 pb-4 text-sm font-normal text-secondary">
+          <span>
+            <span className="text-accent">↑↓</span> select{" "}
+            <span className="text-accent">↵</span> open
+          </span>
+          <span>
+            <span className="text-accent">esc</span> close
+          </span>
         </div>
       </Command.Dialog>
     </>

@@ -9,6 +9,7 @@ const { title } = Astro.props;
 const blogPosts = sortPosts(await getCollection("blog")).map(({ id, data }) => ({
   id,
   title: data.title,
+  description: data.description,
 }));
 import NavBar from "~/components/NavBar";
 import KeyboardShortcuts from "~/components/KeyboardShortcuts";
