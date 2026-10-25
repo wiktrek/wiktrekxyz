@@ -1,0 +1,47 @@
+<section
+  id="about"
+  class="md:h-[60vh] md:text-4xl h-[100vh] text-3xl pt-42"
+>
+  <h1 class="hero-in">
+    Hello, I'm{" "}
+    <a href="https://github.com/wiktrek" target="_blank" class="hero-name">
+      wiktrek
+    </a>.
+  </h1>
+  <h2 class="text-xl hero-in hero-in-late">
+    I love programming and building stuff
+  </h2>
+</section>
+
+<style>
+  .hero-in {
+    animation: hero-in 200ms ease-out both;
+  }
+  .hero-in-late {
+    animation-delay: 60ms;
+  }
+  .hero-name {
+    color: var(--text);
+    animation: hero-name 400ms ease-out both;
+  }
+  @keyframes hero-in {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+  }
+  @keyframes hero-name {
+    from {
+      color: var(--primary);
+    }
+    to {
+      color: var(--text);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-in,
+    .hero-name {
+      animation: none;
+    }
+  }
+</style>

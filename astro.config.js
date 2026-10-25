@@ -21,7 +21,14 @@ export default defineConfig({
     }),
   ],
 
-  prefetch: true,
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: "hover",
+  },
+
+  experimental: {
+    clientPrerender: true,
+  },
 
   adapter: vercel({
     includeFiles: ["./data/data.json"],

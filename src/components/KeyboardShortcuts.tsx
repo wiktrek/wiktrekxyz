@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Command } from "cmdk";
+import { prefetch } from "astro:prefetch";
 
 type BlogPost = {
   id: string;
@@ -30,6 +31,16 @@ const commands = [
 export default function KeyboardShortcuts({ blogPosts }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [awaitingSequence, setAwaitingSequence] = useState(false);
+  const commandPaths: Record<string, string> = Object.fromEntries([
+    ...commands.map((command) => [
+      `${command.value} ${command.label}`,
+      command.path,
+    ]),
+    ...blogPosts.map((post) => [
+      `${post.title} blog post`.trim(),
+      `/blog/${post.id}`,
+    ]),
+  ]);
   const isMac = /Mac|iPhone|iPad|iPod/.test(
     navigator.platform || navigator.userAgent,
   );
@@ -89,6 +100,7 @@ export default function KeyboardShortcuts({ blogPosts }: Props) {
       if (event.key.toLowerCase() === "g") {
         event.preventDefault();
         setAwaitingSequence(true);
+        commands.forEach((command) => prefetch(command.path));
         sequenceTimeout = setTimeout(() => setAwaitingSequence(false), 1200);
       }
     };
@@ -126,6 +138,10 @@ export default function KeyboardShortcuts({ blogPosts }: Props) {
       <Command.Dialog
         open={isOpen}
         onOpenChange={setIsOpen}
+        onValueChange={(value) => {
+          const path = commandPaths[value];
+          if (path) prefetch(path);
+        }}
         label="Command menu"
         overlayClassName="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm"
         contentClassName="fixed left-1/2 top-[18vh] z-50 w-[min(92vw,560px)] -translate-x-1/2 overflow-hidden bg-background font-mono font-bold text-text shadow-2xl shadow-black"

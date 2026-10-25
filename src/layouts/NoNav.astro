@@ -4,9 +4,7 @@ export interface Props {
   title: string;
 }
 const { title } = Astro.props;
-import NavBar from "~/components/NavBar";
 import { Toaster } from "~/components/ui/toaster";
-import { ClientRouter } from "astro:transitions";
 ---
 
 <html lang="en" translate="no">
@@ -29,7 +27,6 @@ import { ClientRouter } from "astro:transitions";
       content={Astro.generator}
     />
     <title>{title}</title>
-    <ClientRouter />
   </head>
   <body class="font-bold bg-background">
     <slot />
